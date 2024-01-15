@@ -1,0 +1,151 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-text-size-adjust: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: .4s;
+}
+
+body.overflow-hidden {
+    overflow: hidden;
+}
+
+body b {
+    font-weight: 700;
+    color: inherit;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+
+    @include breakpoint(lg) {
+        width: 5px;
+        height: 10px;
+    }
+}
+
+::-webkit-scrollbar-track {
+
+    @include breakpoint(lg) {
+        background: #f7f7f7;
+    }
+}
+
+::-webkit-scrollbar-thumb {
+
+    @include breakpoint(lg) {
+        background: gray;
+    }
+}
+
+* {
+
+    @include breakpoint(lg) {
+        scrollbar-width: thin;
+        scrollbar-color: gray #f7f7f7;
+    }
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
+
+main {
+    min-height: calc(max(calc(100vh - 614px), 350px));
+}
+
+.hide {
+    display: none !important;
+}
+
+#page {
+    position: relative;
+    min-width: 320px;
+    min-height: 100%;
+    max-width: 100%;
+}
+
+ul {
+    padding-left: 16px;
+}
+
+input {
+    width: 100%;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+}
+
+input::placeholder {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+}
+
+a {
+    transition: color .2s ease;
+}
+
+a:hover {
+    color: red;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $mainFont;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    cursor: pointer;
+    transition: all .3s ease-out;
+}
+
+.btn--red {
+    background: $red;
+
+    &:hover {
+        background: #fff;
+        color: $blue;
+    }
+}
+
+.btn--white-stroke {
+    border: 1px solid #fff;
+
+    &:hover {
+        background: $blue;
+        border-color: $blue;
+    }
+}
+
+/////////////////////
+/// SWIPER SLIDER
+/////////////////////
+.swiper-pagination {
+    --swiper-pagination-bottom: auto;
+    --swiper-pagination-top: calc(100% + 20px);
+    --swiper-pagination-bullet-width: 10px;
+    --swiper-pagination-bullet-height: 10px;
+    --swiper-pagination-bullet-horizontal-gap: 5px;
+    --swiper-pagination-color: #F61F26;
+    --swiper-pagination-bullet-inactive-color: #BEBEBE;
+    --swiper-pagination-bullet-inactive-opacity: 1;
+
+    margin-top: 20px;
+    position: static;
+
+    @include breakpoint(md) {
+        display: none;
+    }
+}

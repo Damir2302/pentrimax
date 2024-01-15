@@ -1,0 +1,59 @@
+.breadcrumbs {
+    padding-top: 20px;
+    padding-bottom: 30px;
+
+    @include breakpoint(lg) {
+        padding-top: 50px;
+    }
+
+}
+
+.breadcrumbs a {
+    text-decoration: none;
+}
+
+.breadcrumbs-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: max-content;
+
+    @include breakpointMax(md) {
+        max-height: 46px;
+        overflow: hidden;
+    }
+}
+
+.breadcrumbs-item {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #545454;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160.023%;
+}
+
+.breadcrumbs-item:not(:last-child)::after {
+    content: '';
+    margin: 0 8px;
+    background: url('../images/chevron_right.svg') no-repeat;
+    background-position: center;
+    display: block;
+    width: 10px;
+    height: 10px;
+
+    @include breakpoint(md) {
+        margin: 0 12px;
+    }
+}
+
+.breadcrumbs-item span {
+    user-select: none;
+
+    @include breakpointMax(md) {
+        @include textLimit(1);
+    }
+}

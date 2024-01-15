@@ -1,0 +1,21 @@
+:root {
+    --container-padding: 10px;
+  
+    @include breakpoint(md) {
+      --container-padding: 24px;
+    }
+  
+    @include breakpoint(lg) {
+      --container-padding: 20px;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 1440px;
+    box-sizing: border-box;
+}

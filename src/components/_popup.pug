@@ -1,0 +1,37 @@
+block popups
+
+    // ПОПАП "ОБРАТНЫЙ ЗВОНОК"
+    #popup-callback.popup
+        .popup-title Заказать звонок
+
+        .popup-form
+            form
+                input(type="text" name="callback_name" placeholder="Ваше имя")
+                input.inputmask(type="tel" name="callback_phone" placeholder="Ваш номер телефона*")
+                button.btn.btn--red(type="submit") Отправить
+                .agreement
+                    .checkbox-style
+                        input#agree_callback(type="checkbox" checked name="agree_callback" style="display:none")
+                        label(for="agree_callback")
+                    p Я даю своё согласие на обработку персональных данных в соответствии с «Политикой конфиденциальности»
+
+    // ПОПАП "ОСТАВИТЬ ЗАЯВКУ"
+    #popup-request.popup
+        .popup-title Оставить заявку
+
+        .popup-form
+            form
+                input(type="text" name="request_name" placeholder="Ваше имя")
+                input.inputmask(type="tel" name="request_phone" placeholder="Ваш номер телефона*")
+                button.btn.btn--red(type="submit") Отправить
+                .agreement
+                    .checkbox-style
+                        input#agree_request(type="checkbox" checked name="agree_request" style="display:none")
+                        label(for="agree_request")
+                    p Я даю своё согласие на обработку персональных данных в соответствии с «Политикой конфиденциальности»
+
+    // ПОПАП "УСПЕШНО"
+    #popup-success.popup.popup-success
+        .popup-icon
+        .popup-title Спасибо!
+        .popup-text Ваша заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.

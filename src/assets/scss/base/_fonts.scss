@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+:root {
+  --font-family: 'Montserrat', sans-serif;
+}
+
+$mainFont: var(--font-family);
+
+body {
+  font-family: $mainFont;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #fff;
+
+  @include breakpoint(md) {
+    font-size: 15px;
+  }
+
+  @include breakpoint(xl) {
+    font-size: 16px;
+  }
+}
