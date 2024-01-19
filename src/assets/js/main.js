@@ -11,25 +11,33 @@ $(document).ready(function() {
         }
     });
 
-    $('.header__menu').on('click', (e) => {
-        if (!$(e.target).hasClass('active')) {
-            $(e.target).addClass('active');
-            $('.header__main').addClass('mobile-menu');
-        } else {
-            $('.header__main').removeClass('mobile-menu');
-            $(e.target).removeClass('active');
+    $("html").on("click", function (e) {
+        if (
+        !$(e.target).closest(".header-menu").length &&
+        !$(e.target).closest("#menu").length
+        ) {
+            $('#page').removeClass('bg-overlay');
+            $('#menu').removeClass('active');
         }
     });
 
-    if ($(window).width() < 1200) {
-        $('.navbar .arrow-down').on('click', (e) => {
-            $(e.target).parent().toggleClass('active');
-            $(e.target).next().slideToggle();
-        });
-    }
+    // BURGER MENU
+    $('.header-menu').on('click', () => {
+        $('#menu').toggleClass('active');
+        $('#page').toggleClass('bg-overlay');
+    });
+
+    $('#menu-close').on('click', () => {
+        $('#menu').toggleClass('active');
+        $('#page').toggleClass('bg-overlay');
+    })
+    
+    $('#menu .arrow-down').on('click', (e) => {
+        $(e.target).parent().toggleClass('active');
+        $(e.target).next().slideToggle();
+    });
 
     
-
 });
 
 

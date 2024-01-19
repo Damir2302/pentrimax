@@ -19,22 +19,28 @@ html(lang="ru")
 
     body(class= bodyClass ? bodyClass : '')
 
-        #page
+        #page.page
 
-            // Header::Start
-            block header
-                include _header
-            // Header::End
+            // Side::Start
+            block side
+                include _sidebar
+            // Side::End
 
-            // Main::Start
-            main#main
-                block main
-            // Main::End
+            .page-inner
+                // Header::Start
+                block header
+                    include _header
+                // Header::End
 
-            // Footer::Start
-            block footer
-                include _footer
-            // Footer::End
+                // Main::Start
+                main#main
+                    block main
+                // Main::End
+
+                // Footer::Start
+                block footer
+                    include _footer
+                // Footer::End
 
         block popups
             include ../components/_popup

@@ -1,0 +1,87 @@
+include _mixins
+block side
+
+    .sidebar
+
+        .header-menu
+            .burger
+                span
+                span
+                span
+
+        .sidebar-flag
+            p Сделано в россии
+            +img('flag.svg')
+
+        .sidebar-buttons
+
+            .sidebar-buttons-search
+                a(href="javascript:void(0)" data-src="#popup-search" data-fancybox) 
+                    +img('search.svg')
+            
+            .sidebar-buttons-phone
+                a(href="tel:8(800)3006837")
+                    +img('phone.svg')
+            
+            .sidebar-buttons-request
+                a(href="javascript:void(0)" data-src="#popup-request" data-fancybox) 
+                    +img('message-quote.svg')
+            
+            .sidebar-buttons-email
+                a(href="mailto:example@mail.ru") 
+                    +img('envelope.svg')
+
+        #menu.menu
+
+            #menu-close.menu-close
+
+            ul.menu-list
+                li.menu__item.has-child
+                    a.menu__item-link(href="#") О компании
+                    .arrow-down
+                    
+                    ul.submenu
+                        li.submenu__item
+                            a.submenu__item-link(href="#") Новости
+                        
+                        li.submenu__item
+                            a.submenu__item-link(href="#") Вакансии
+
+                li.menu__item
+                    a.menu__item-link(href="#") Продукция
+                li.menu__item
+                    a.menu__item-link(href="#") Сферы применения
+                li.menu__item
+                    a.menu__item-link(href="#") Каталог цветов
+                li.menu__item
+                    a.menu__item-link(href="#") учебный центр
+                li.menu__item
+                    a.menu__item-link(href="#") Проектировщикам
+                li.menu__item
+                    a.menu__item-link(href="#") Контакты
+
+            .menu__phone
+                a(href="tel:8(800)3006837") 8 (800) 300-68-37
+                p Ежедневно с 08:00 до 17:00 (МСК)
+            
+            .menu__buttons
+
+                .menu__buttons-search
+                    a(href="javascript:void(0)" data-src="#popup-search" data-fancybox) 
+                        +img('search.svg')
+                
+                .menu__buttons-phone
+                    a(href="tel:8(800)3006837")
+                        +img('phone.svg')
+                
+                .menu__buttons-request
+                    a(href="javascript:void(0)" data-src="#popup-request" data-fancybox) 
+                        +img('message-quote.svg')
+                
+                .menu__buttons-email
+                    a(href="mailto:example@mail.ru") 
+                        +img('envelope.svg')
+
+            .menu__country
+                p Сделано в россии
+                +img('flag.svg')

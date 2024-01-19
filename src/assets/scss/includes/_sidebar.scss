@@ -1,0 +1,211 @@
+.sidebar {
+
+    @include breakpoint(lg) {
+        padding-bottom: 30px;
+        background: $blue-dark;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-shrink: 0;
+        width: 80px;
+        height: 100vh;
+        border-right: 1px solid #3A4160;
+        z-index: 20;
+    }
+
+    @include breakpoint(xl) {
+        flex-shrink: 1;
+        width: 7.5%;
+        max-width: 141px;
+    }
+}
+
+.sidebar .header-menu {
+
+    @include breakpointMax(lg) {
+        display: none;
+    }
+
+    @include breakpoint(lg) {
+        margin: 0;
+        display: flex;
+    }
+}
+
+.sidebar-flag {
+
+    @include breakpointMax(lg) {
+        display: none;
+    }
+
+    @include breakpoint(lg) {
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+        width: max-content;
+        transform: rotate(-90deg);
+    }
+}
+
+.sidebar-flag p {
+
+    @include breakpoint(lg) {
+        margin-right: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+}
+
+.sidebar-buttons {
+
+    @include breakpointMax(lg) {
+        display: none;
+    }
+    
+    @include breakpoint(lg) {
+        margin-top: auto;
+    }
+}
+
+.sidebar-buttons > div {
+    padding: 12px 15px;
+}
+
+.menu {
+    padding: 30px 50px;
+    background: $blue-dark;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    overflow-y: scroll;
+    transition: left .3s ease-out;
+    z-index: 20;
+
+    @include breakpoint(md) {
+        max-width: 406px;
+    }
+}
+
+.menu.active {
+    left: 0;
+}
+
+.menu::-webkit-scrollbar {
+    width: 0;
+}
+
+.menu-close {
+    margin: 0 auto 36px;
+    background-color: $blue;
+    background-image: url('../images/x.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px 22px;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.menu ul {
+    padding: 0;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+.menu__item {
+    padding: 15px 16px;
+    border-bottom: 1px solid #38548A;
+}
+
+.menu__item.has-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.has-child .arrow-down {
+    background: url('../images/chevron-down.svg') no-repeat;
+    background-size: 12px;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    transform: rotate(-90deg);
+    transition: transform .3s ease-out;
+    cursor: pointer;
+}
+
+.has-child.active .arrow-down {
+    transform: rotate(0);
+}
+
+.menu__item-link:hover {
+    opacity: 0.6;
+}
+
+.submenu {
+    display: none;
+    width: 100%;
+}
+
+.submenu__item {
+    margin-top: 15px;
+}
+
+.submenu__item-link:hover {
+    opacity: 0.6;
+}
+
+.menu__phone {
+    margin-top: auto;
+}
+
+.menu__phone a {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.menu__phone a:hover {
+    opacity: 0.6;
+}
+
+.menu__phone p {
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+.menu__buttons {
+    margin-top: 36px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu__buttons > div {
+    padding: 12px 15px;
+}
+
+.menu__country {
+    margin-top: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 55px;
+    border: 1px solid #38548A;
+}
+
+.menu__country p {
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+}

@@ -19,15 +19,15 @@ body.compensate-for-scrollbar {
 }
 
 .popup {
-    padding: 50px 10px;
-    background: $black;
+    padding: 40px;
+    background: #223B6C;
     display: none;
-    max-width: 375px;
+    max-width: 470px;
     color: #fff;
 
-    @include breakpoint(lg) {
-        padding: 50px 40px;
-        max-width: 680px;
+    @include breakpointMax(md) {
+        padding: 20px;
+        width: calc(100% - 30px);
     }
 }
 
@@ -44,86 +44,110 @@ body.compensate-for-scrollbar {
 }
 
 .popup-title {
-    margin-bottom: 30px;
-    font-size: 22px;
-    font-weight: 500;
-    
-    @include breakpointMax(lg) {
-        text-align: center;
-    }
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 130%;
 
-    @include breakpoint(lg) {
-        font-size: 30px;
+    @include breakpoint(md) {
+        font-size: 36px;
     }
 }
 
+.popup-subtitle {
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: 500;
 
+    @include breakpoint(md) {
+        font-size: 20px;
+    }
+}
 
 .popup-form input {
-    padding: 20px;
-    background: #292929;
-    height: 60px;
+    margin-bottom: 30px;
 }
 
-.popup-form input ~ input {
-    margin-top: 10px;
+.checkbox-style label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 30px;
+    border: 1px solid #fff;
+    cursor: pointer;
 }
 
-.popup-form .btn {
-    margin-top: 20px;
-    width: 100%;
-    height: 60px;
-
-    @include breakpoint(lg) {
-        width: 210px;
-    }
+.checkbox-style input:checked + label::before {
+    content: "";
+    background: $red;
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
 }
 
 .agreement {
-    margin-top: 20px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .agreement p {
-    color: $gray;
+    margin-left: 16px;
+    font-size: 12px;
+}
+
+.agreement a {
+    margin-left: 5px;
+    display: inline;
+    color: #0C7CC6;
+}
+
+.popup-form .btn {
+    margin-top: 14px;
+    width: 100%;
+    height: 64px;
 }
 
 .popup-success {
+    text-align: center;
+}
 
-    .popup-icon {
-        margin: 0 auto 30px;
-        background-color: rgba(255, 255, 255, 0.10);
-        background-image: url('../images/check.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 36px;
-        width: 60px;
-        height: 60px;
-        border-radius: 100px;
-        filter: brightness(100);
-    
-        @include breakpoint(lg) {
-            width: 80px;
-            height: 80px;
-        }
+.popup-success .btn {
+    width: 100%;
+    height: 64px;
+}
+
+.popup-search {
+
+    @include breakpoint(md) {
+        width: 100%;
+        max-width: 980px;
     }
+}
 
-    .popup-title {
-        margin-bottom: 20px;
+.popup-search button.is-close {
+    display: none;
+}
 
-        @include breakpoint(lg) {
-            text-align: center;
-        }
-    }
-
-    .popup-text {
-        font-size: 16px;
-        text-align: center;
+.popup-search form {
     
-        @include breakpoint(lg) {
-            max-width: 388px;
-            font-size: 18px;
-        }
+    @include breakpoint(md) {
+        display: flex;
+    }
+}
+
+.popup-search button {
+    margin-top: 20px;
+    width: 100%;
+    height: 46px;
+
+    @include breakpoint(md) {
+        margin-top: 0;
+        margin-left: 30px;
+        flex-shrink: 0;
+        width: 116px;
+        height: 64px;
     }
 }

@@ -1,0 +1,237 @@
+.header {
+    padding: 16px 0 18px;
+    background: $blue-dark;
+    border-bottom: 1px solid#3A4160;
+    z-index: 15;
+
+    @include breakpoint(md) {
+        padding: 20px 0;
+    }
+
+    @include breakpointMax(lg) {
+        position: sticky;
+        top: 0;
+    }
+
+    @include breakpoint(lg) {
+        padding: 30px 0;
+        border: none
+    }
+
+    @include breakpoint(xl) {
+        padding: 40px 0;
+    }
+}
+
+.header__inner {
+    position: relative;
+
+    @include breakpoint(md) {
+        display: flex;
+        align-items: center;
+    }
+
+    @include breakpoint(xl) {
+        justify-content: space-between;
+    }
+}
+
+.header__logo {
+    width: 206px;
+
+    @include breakpoint(md) {
+        width: 308px;
+    }
+}
+
+.header__nav {
+
+    @include breakpointMax(xl) {
+        display: none;
+    }
+}
+
+.nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+.nav-list {
+    
+    @include breakpoint(xl) {
+        display: flex;
+        align-items: center;
+        column-gap: 25px;
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+}
+
+.nav__item-link:hover {
+    opacity: 0.6;
+}
+
+.nav__item.has-child {
+
+    @include breakpoint(xl) {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.nav__item.has-child .arrow-down {
+    
+    @include breakpoint(xl) {
+        margin-left: 6px;
+        transform: rotate(0);
+    }
+}
+
+.subnav {
+    display: none;
+}
+
+.nav__item.has-child:hover .subnav {
+
+    @include breakpoint(xl) {
+        background: $blue;
+        position: absolute;
+        top: calc(100% + 30px);
+        left: 0;
+        display: block;
+        width: 100%;
+    }
+}
+
+.subnav::before {
+
+    @include breakpoint(xl) {
+        content: "";
+        background: url('../images/triangle.svg') no-repeat;
+        background-size: 7px 6px;
+        background-position: center bottom;
+        position: absolute;
+        left: 0;
+        bottom: 100%;
+        display: block;
+        width: 100%;
+        height: 30px;
+    }
+}
+
+.subnav__item {
+
+    @include breakpoint(xl) {
+        border-bottom: 1px solid #38548A;
+    }
+}
+
+.subnav__item-link {
+
+    @include breakpoint(xl) {
+        padding: 15px 16px;
+        display: block;
+    }
+}
+
+.subnav__item-link:hover {
+    opacity: 0.6;
+}
+
+.header__phone {
+    margin-top: 8px;
+    font-size: 12px;
+    font-weight: 500;
+
+    @include breakpoint(md) {
+        margin-top: 0;
+        margin-left: auto;
+    }
+
+    @include breakpoint(xl) {
+        margin: 0;
+    }
+}
+
+.header__phone:hover {
+    opacity: 0.6;
+}
+
+.header-menu {
+    background: $blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 54px;
+    cursor: pointer;
+
+    @include breakpointMax(md) {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    @include breakpoint(md) {
+        margin-left: 90px;
+        width: 80px;
+        height: 74px;
+    }
+
+    @include breakpoint(lg) {
+        display: none;
+    }
+
+    @include breakpoint(xl) {
+        width: 100%;
+        height: 130px;
+    }
+}
+
+.header-menu .burger {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-menu span {
+    background: #fff;
+    height: 2px;
+    width: 22px;
+    border-radius: 10px;
+    transition: width .3s ease-out;
+
+    @include breakpoint(md) {
+        width: 30px;
+    }
+}
+
+.header-menu span:nth-child(2) {
+    width: 18px;
+
+    @include breakpoint(md) {
+        width: 24px;
+    }
+}
+
+.header-menu span:nth-child(3) {
+    width: 12px;
+
+    @include breakpoint(md) {
+        width: 16px;
+    }
+}
+
+.header-menu:hover span:nth-child(3) {
+    width: 22px;
+
+    @include breakpoint(md) {
+        width: 30px;
+    }
+}
+
+.header-menu span ~ span {
+    margin-top: 6px;
+}

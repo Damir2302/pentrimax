@@ -4,6 +4,47 @@ block header
     header#header.header
 
         .container
+            
+            .header__inner
 
-            .header__logo
-                +img('logo.svg')
+                .header__logo
+                    a(href="/") 
+                        +img('logo.svg')
+
+                .header__nav
+                    
+                    nav.nav
+
+                        ul.nav-list
+                            li.nav__item.has-child
+                                a.nav__item-link(href="#") О компании
+                                .arrow-down
+                                
+                                ul.subnav
+                                    li.subnav__item
+                                        a.subnav__item-link(href="#") Новости
+                                    
+                                    li.subnav__item
+                                        a.subnav__item-link(href="#") Вакансии
+
+                            li.nav__item
+                                a.nav__item-link(href="#") Продукция
+                            li.nav__item
+                                a.nav__item-link(href="#") Сферы применения
+                            li.nav__item
+                                a.nav__item-link(href="#") Каталог цветов
+                            li.nav__item
+                                a.nav__item-link(href="#") учебный центр
+                            li.nav__item
+                                a.nav__item-link(href="#") Проектировщикам
+                            li.nav__item
+                                a.nav__item-link(href="#") Контакты
+
+                .header__phone
+                    a(href="tel:8(800)3006837") 8 (800) 300-68-37
+
+                .header-menu
+                    .burger
+                        span
+                        span
+                        span
