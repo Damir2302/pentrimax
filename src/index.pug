@@ -1,6 +1,7 @@
 ---
 title: Страница | Главная
 bodyClass: main-page
+yandexMap: true
 ---
 
 extends includes/_page
@@ -362,3 +363,26 @@ block main
                                 +img('img-3.png')
                             .slider__item-title Грунт-эмаль PENTRIPROTECT EPE 120
                             .slider__item-text Грунт-эмаль антикоррозионная быстросохнущая однокомпонентная
+
+    section.section-filial
+
+        .filial
+
+            .section-title Филиалы и дилеры по России
+
+            ul
+                li Москва
+                li Воронеж
+                li Нижний Новгород
+                li Татарстан
+                li Екатеринбург
+                li Кемерово
+                li Уссурийск
+                li Барнаул
+                li Краснодар
+
+            #map.map
+
+            .filial__info
+                +img('truck-container.svg')
+                p Доставка по всей России транспортными компаниями: Деловые Линии, ПЭК, Vozovoz и другими.

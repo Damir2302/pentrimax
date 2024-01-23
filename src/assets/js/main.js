@@ -37,6 +37,16 @@ $(document).ready(function() {
         $(e.target).next().slideToggle();
     });
 
+    // FILIAL MAP
+    $('.points__item').on('click', (e) => {
+        
+        if ($(e.target).hasClass('active')) {
+            $($(e.target)).removeClass('active');
+        } else {
+            $('.points__item').removeClass('active');
+            $($(e.target)).addClass('active');
+        }
+    })
     
 });
 

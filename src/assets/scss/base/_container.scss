@@ -32,11 +32,9 @@
 
   @include breakpoint(xl) {
     padding-left: 7.5%;
-    width: 92.5%;
   }
 
   @include breakpoint(hd) {
     padding-left: 140px;
-    width: 100%;
   }
 }
