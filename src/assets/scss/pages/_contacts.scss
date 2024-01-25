@@ -1,0 +1,212 @@
+.section-contacts {
+    padding: 40px 0;
+
+    @include breakpoint(lg) {
+        padding: 60px 0;
+        isolation: isolate;
+    }
+
+    @include breakpoint(xl) {
+        padding: 80px 0;
+    }
+}
+
+.section-contacts::before {
+
+    @include breakpoint(lg) {
+        content: "";
+        background: radial-gradient(50% 50% at 50% 50%, #4762A5 0%, rgba(58, 65, 91, 0.00) 100%);
+        position: absolute;
+        top: 0;
+        left: -625px;
+        width: 944px;
+        height: 521px;
+        border-radius: 640px;
+        z-index: -1;
+    }
+
+    @include breakpoint(xl) {
+        top: -50px;
+        left: -735px;
+        width: 1434px;
+        height: 792px;
+    }
+}
+
+.contacts {
+
+    @include breakpoint(md) {
+        display: flex;
+    }
+}
+
+.contacts-block {
+
+    @include breakpoint(md) {
+        width: 32.5%;
+    }
+
+    @include breakpoint(lg) {
+        width: 24%;
+    }
+
+    @include breakpoint(xl) {
+        width: 305px;
+    }
+}
+
+.contacts__item {
+    margin-bottom: 20px;
+
+    @include breakpoint(lg) {
+        margin-bottom: 30px;
+    }
+}
+
+.contacts__label {
+    margin-bottom: 5px;
+}
+
+.contacts-block a:not(.btn) {
+    color: #0C7CC6;
+}
+
+.contacts-block a[href^=tel] {
+    font-weight: 600;
+    color: #fff;
+}
+
+.contacts__item p {
+
+    @include breakpoint(lg) {
+        font-size: 12px;
+    }
+}
+
+.contacts-block .btn {
+    width: 344px;
+    height: 52px;
+
+    @include breakpoint(md) {
+        width: 224px;
+    }
+
+    @include breakpoint(lg) {
+        width: 205px;
+    }
+
+    @include breakpoint(xl) {
+        width: 225px;
+    }
+}
+
+.address-block {
+    
+    @include breakpointMax(md) {
+        margin-top: 40px;
+    }
+
+    @include breakpoint(md) {
+        margin-left: 20px;
+    }
+
+    @include breakpoint(lg) {
+        margin-left: 96px;
+    }
+
+    @include breakpoint(xl) {
+        margin-left: 76px;
+    }
+}
+
+.address__title {
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 600;
+
+    @include breakpoint(md) {
+        margin-bottom: 40px;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 28px;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 30px;
+    }
+}
+
+.address__city {
+    font-size: 18px;
+    font-weight: 600;
+
+    @include breakpoint(lg) {
+        font-size: 20px;
+    }
+}
+
+.address__street {
+    margin-top: 5px;
+    margin-bottom: 16px;
+
+    @include breakpoint(lg) {
+        margin-bottom: 30px;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 22px;
+    }
+}
+
+.address__question {
+    margin-top: 30px;
+    
+    @include breakpointMax(md) {
+        padding: 25px 5px;
+        text-align: center;
+        border: 1px solid #38548A;
+    }
+
+    @include breakpoint(md) {
+        margin-top: 40px;
+    }
+}
+
+.address__question-title {
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: 500;
+
+    @include breakpoint(md) {
+        margin-bottom: 10px;
+    }
+
+    @include breakpoint(lg) {
+        margin-bottom: 30px;
+        font-size: 28px;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 30px;
+    }
+}
+
+.address__question-text {
+    margin-bottom: 16px;
+
+    @include breakpoint(md) {
+        margin-bottom: 10px;
+    }
+
+    @include breakpoint(lg) {
+        margin-bottom: 30px;
+        font-size: 16px;
+    }
+}
+
+.address__question .btn {
+    width: 225px;
+    height: 50px;
+    font-size: 14px;
+}

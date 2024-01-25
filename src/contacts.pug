@@ -1,0 +1,53 @@
+---
+title: Страница | Контакты
+bodyClass: contacts-page
+---
+
+extends includes/_page
+
+block main
+
+    include components/_breadcrumbs
+    +breadcrumbs('Контакты', 'Контакты')
+
+    section.section-contacts
+
+        .container
+
+            .contacts
+
+                .contacts-block
+
+                    .contacts__item
+                        .contacts__label Телефон:
+                        a(href="tel:88003006837") 8 (800) 300-68-37
+                        p Ежедневно с 08:00 до 17:00 (МСК)
+
+                    .contacts__item
+                        .contacts__label E-mail:
+                        a(href="mailto:info@pentrimax.ru") info@pentrimax.ru
+
+                    .contacts__item
+                        .contacts__label По вопросам трудоустройства 
+                        a(href="mailto:hr@pentrimax.ru") hr@pentrimax.ru
+
+                    a.btn.btn--white-stroke(href="vacancy.html") Смотреть вакансии
+
+                .address-block
+
+                    .address__title Региональные филиалы:
+
+                    .address__city Москва
+                    .address__street 119530, Москва, Очаковское шоссе, д. 34
+
+                    .address__city Екатеринбург
+                    .address__street 620026, Екатеринбург, ул. Белинского д. 83
+
+                    .address__city Воронеж
+                    .address__street 394053, Воронеж, Московский проспект, д. 130
+
+                    .address__question
+                        .address__question-title Остались вопросы?
+                        .address__question-text Свяжитесь с нами и мы всё Вам расскажем!
+
+                        .btn.btn--red(data-src="#popup-request" data-fancybox) Связаться

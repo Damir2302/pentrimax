@@ -1,2 +1,66 @@
 include _mixins
 block footer
+
+    footer#footer.footer
+
+        .container
+
+            .footer__inner
+
+                .footer__logo
+                    a(href="/")
+                        +img('logo.svg')
+
+                .footer__cat
+                    ul
+                        li
+                            a(href="#") Антикоррозийные грунты
+                        li
+                            a(href="#") Антикоррозийные грунт-эмали
+                        li
+                            a(href="#") Специализированные эмали
+
+                .footer__nav
+                    ul
+                        li
+                            a(href="#") О компании
+                        li
+                            a(href="#") Продукция
+                        li
+                            a(href="#") Сферы применения
+                        li
+                            a(href="#") Каталог цветов
+                        li
+                            a(href="#") Технологам
+                        li
+                            a(href="#") Проектировщикам
+                        li
+                            a(href="#") Контакты
+
+                .footer__address
+
+                    .footer-label Адрес
+                    p 119530, Москва, Очаковское шоссе, д. 34
+                    p 620026, Екатеринбург, ул. Белинскогод. 83
+                    p 394053, Воронеж, Московский проспект, д. 130
+
+                .footer__contacts
+
+                    .footer-label Телефон
+                    a(href="tel:88003006837") 8 (800) 300-68-37
+
+                    .footer-label E-mail
+                    a(href="mailto:info@pentrimax.ru") info@pentrimax.ru
+
+                    .btn.btn--white-stroke(data-src="#popup-request" data-fancybox) Обратный звонок
+            
+            .footer__bottom
+
+                .footer__copyright © Все права защищены 2023
+                .footer__policy
+                    a(href="/policy/") Политика конфиденциальности
+                .footer__sitemap
+                    a(href="/sitemap/") карта сайта
+                .footer__devs
+                    a(href="https://di-project.studio/") Разработка сайта
+                    span Di-Project.Studio

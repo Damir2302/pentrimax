@@ -19,9 +19,11 @@ mixin breadcrumbs(title, ...items)
                         .breadcrumbs-item
                             a(href="#")= item
 
-    if bodyClass != 'works-inner-page'
+    if bodyClass != 'main-page'
         .head-title
         
             .container
 
                 h1.title= title
+
+                .btn.btn--white-stroke(onclick="history.back()") Назад

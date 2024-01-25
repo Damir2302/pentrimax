@@ -38,8 +38,8 @@ body.compensate-for-scrollbar {
     height: 24px;
 
     @include breakpoint(lg) {
-        top: 25px!important;
-        right: 25px!important;
+        top: 20px!important;
+        right: 20px!important;
     }
 }
 

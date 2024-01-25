@@ -1,11 +1,9 @@
 .breadcrumbs {
     padding-top: 20px;
-    padding-bottom: 30px;
 
-    @include breakpoint(lg) {
-        padding-top: 50px;
+    @include breakpoint(xl) {
+        padding-bottom: 10px;
     }
-
 }
 
 .breadcrumbs a {
@@ -25,35 +23,66 @@
 }
 
 .breadcrumbs-item {
+    margin-right: 9px;
     display: flex;
     align-items: center;
     font-size: 12px;
-    color: #545454;
-    font-family: Inter;
+    color: #fff;
+    font-family: $mainFont;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 160.023%;
+    line-height: 150%;
+
+    @include breakpoint(md) {
+        font-size: 15px;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 16px;
+    }
 }
 
-.breadcrumbs-item:not(:last-child)::after {
+.breadcrumbs-item:not(:first-child)::before {
     content: '';
-    margin: 0 8px;
+    margin-right: 9px;
     background: url('../images/chevron_right.svg') no-repeat;
     background-position: center;
     display: block;
-    width: 10px;
-    height: 10px;
-
-    @include breakpoint(md) {
-        margin: 0 12px;
-    }
+    width: 12px;
+    height: 12px;
 }
 
 .breadcrumbs-item span {
     user-select: none;
+}
 
-    @include breakpointMax(md) {
-        @include textLimit(1);
+.head-title .btn {
+    margin-top: 10px;
+    width: 122px;
+    height: 50px;
+
+    @include breakpoint(md) {
+        width: 127px;
+    }
+
+    @include breakpoint(xl) {
+        margin-top: 30px;
+        width: 130px;
+    }
+}
+
+.head-title .btn::before {
+    content: "";
+    margin-right: 8px;
+    background: url('../images/arrow.svg') no-repeat;
+    background-position: center;
+    display: inline-block;
+    width: 11px;
+    height: 18px;
+
+    @include breakpoint(md) {
+        width: 13px;
+        height: 21px;
     }
 }

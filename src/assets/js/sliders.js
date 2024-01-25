@@ -3,6 +3,8 @@ $(document).ready(function() {
     const heroSlider = new Swiper(".hero .swiper", {
         slidesPerView: 1,
         spaceBetween: 10,
+        observer: true,
+        observeParents: true,
 
         pagination: {
             el: '.hero .swiper-pagination',
@@ -47,7 +49,38 @@ $(document).ready(function() {
                 }
             }
         })
+    });
 
-    })
+    const partnersSlider = new Swiper(".partners .swiper", {
+        slidesPerView: 3,
+        spaceBetween: 10,
+
+        pagination: {
+            el: '.partners .swiper-pagination',
+            clickable: true
+        },
+
+        navigation: {
+            nextEl: '.section-partners .slider-arrow--next',
+            prevEl: '.section-partners .slider-arrow--prev',
+        },
+
+        breakpoints: {
+            744: {
+                slidesPerView: 5,
+                spaceBetween: 15,
+            },
+
+            1024: {
+                slidesPerView: 6,
+                spaceBetween: 20,
+            },
+
+            1560: {
+                slidesPerView: 6,
+                spaceBetween: 30,
+            }
+        }
+    });
 
 });

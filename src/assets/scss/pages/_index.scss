@@ -167,6 +167,10 @@
     @include breakpoint(lg) {
         margin-top: 75px;
     }
+
+    @include breakpoint(xl) {
+        margin-top: 10px;
+    }
 }
 
 .hero .swiper-navigation .slider-arrow {
@@ -902,13 +906,22 @@
 }
 
 .slider__item {
-    padding: 10px;
     height: auto;
+}
+
+.slider__item a {
+    padding: 10px;
+    height: 100%;
     border: 1px solid #38548A;
+    transition: background .3s ease-out;
 
     @include breakpoint(md) {
         padding: 20px;
     }
+}
+
+.slider__item a:hover {
+    background: $blue;
 }
 
 .slider__item-img {
@@ -952,10 +965,11 @@
 .section-filial {
     padding: 30px 0;
     background-color: $blue;
-    background-image: url('../images/img_bg2.png');
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
+
+    @include breakpoint(xl) {
+        padding: 60px 0;
+    }
 }
 
 .section-filial .container {
@@ -968,9 +982,17 @@
 .filial {
 
     @include breakpoint(md) {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        
+        @include breakpointMax(xl) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+
+    @include breakpoint(xl) {
+        margin: 0 auto;
+        max-width: 1560px;
     }
 }
 
@@ -984,6 +1006,11 @@
 
     @include breakpoint(lg) {
         width: calc(100% / 12 * 5);
+    }
+
+    @include breakpoint(xl) {
+        margin-bottom: 52px;
+        max-width: 520px;
     }
 }
 
@@ -1007,6 +1034,11 @@
     @include breakpoint(lg) {
         width: calc(100% / 12 * 6);
     }
+
+    @include breakpoint(xl) {
+        display: block;
+        height: auto;
+    }
 }
 
 .filial ul li {
@@ -1014,6 +1046,10 @@
     
     @include breakpoint(md) {
         font-size: 15px;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 16px;
     }
 }
 
@@ -1025,6 +1061,71 @@
     @include breakpoint(md) {
         margin: 30px auto;
     }
+
+    @include breakpoint(lg) {
+        height: 480px;
+    }
+
+    @include breakpoint(xl) {
+        margin: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1028px;
+        height: 535px;
+    }
+}
+
+.map .popover {
+    padding: 10px;
+    background-color: #0C7CC6;
+    background-clip: padding-box;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    text-align: left;
+    white-space: normal;
+    border-radius: 3px;
+    z-index: 100;
+}
+
+.map .popover .arrow,
+.map .popover .arrow::after {
+    position: absolute;
+    display: block;
+    width: 0px;
+    height: 0px;
+    border-color: transparent;
+    border-style: solid;
+}
+
+.map .popover .arrow {
+    bottom: -11px;
+    left: 50%;
+    margin-left: -11px;
+    border-top-color: #0C7CC6;
+    border-width: 11px;
+    border-bottom-width: 0px;
+}
+
+.popover .arrow::after {
+    content: "";
+    margin-left: -10px;
+    bottom: 1px;
+    border-top-color: rgb(255, 255, 255);
+    border-width: 10px;
+    border-bottom-width: 0px;
+}
+
+.map .baloon-content p {
+    font-family: $mainFont;
+    font-size: 12px;
+    line-height: 150%;
+    color: #fff;
+}
+
+.map .baloon-content p ~ p {
+    margin-top: 5px;
 }
 
 #map ymaps[class$="-copyright"] {
@@ -1034,7 +1135,7 @@
 .filial__info {
     margin: 0 16px;
     padding: 30px;
-    background: $blue;
+    background: #38548a;
     display: flex;
     align-items: flex-start;
 
@@ -1042,6 +1143,10 @@
         margin: 0 30px;
         align-items: center;
         max-width: 608px;
+    }
+
+    @include breakpoint(xl) {
+        margin-top: 48px;
     }
 }
 
@@ -1054,5 +1159,280 @@
     margin-left: 26px;
     padding-left: 26px;
     font-size: 16px;
-    border-left: 1px solid #38548A;
+    border-left: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.section-news-main {
+    padding: 40px 0;
+
+    @include breakpoint(lg) {
+        padding: 60px 0;
+    }
+
+    @include breakpoint(xl) {
+        padding: 80px 0;
+    }
+}
+
+.news-main-head {
+
+    @include breakpoint(md) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.section-news-main .section-title {
+    
+    @include breakpointMax(md) {
+        margin-bottom: 30px;
+    }
+}
+
+.news-main-head .btn {
+    width: 242px;
+    height: 52px;
+}
+
+.news-main {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 10px;
+
+    @include breakpoint(md) {
+        column-gap: 20px;
+    }
+
+    @include breakpoint(xl) {
+        margin-top: 60px;
+        column-gap: 30px;
+    }
+}
+
+.news-main__item {
+    width: calc(50% - 5px);
+
+    @include breakpoint(md) {
+        display: flex;
+        width: calc(25% - 10px);
+    }
+
+    @include breakpoint(xl) {
+        width: calc(25% - 15px);
+    }
+}
+
+.news-main__item-img {
+    margin-bottom: 8px;
+    height: 168px;
+
+    @include breakpoint(lg) {
+        margin-bottom: 10px;
+    }
+
+    @include breakpoint(xl) {
+        height: 200px;
+    }
+}
+
+.news-main__item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.news-main__item-desc {
+    padding: 10px;
+    background: $blue;
+
+    @include breakpoint(md) {
+        height: calc(100% - 176px);
+    }
+
+    @include breakpoint(xl) {
+        padding: 24px;
+        height: calc(100% - 210px);
+    }
+}
+
+.news-main__item-date {
+    margin-bottom: 10px;
+    font-size: 11px;
+    line-height: 150%; 
+
+    @include breakpoint(md) {
+        font-size: 12px;
+    }
+
+    @include breakpoint(xl) {
+        margin-bottom: 20px;
+    }
+}
+
+.news-main__item-title {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 130%;
+    
+    @include breakpointMax(md) {
+        @include textLimit(5);
+    }
+
+    @include breakpoint(md) {
+        font-size: 15px;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 16px;
+    }
+}
+
+.news-main__item-text {
+    margin-top: 10px;
+
+    @include breakpoint(md) {
+        font-size: 15px;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 16px;
+    }
+
+    @include breakpoint(xl) {
+        margin-top: 20px;
+    }
+}
+
+.news-main__item:first-child {
+    width: 100%;
+
+    @include breakpoint(md) {
+        width: calc(50% - 20px);
+    }
+
+    @include breakpoint(xl) {
+        width: calc(50% - 30px);
+    }
+}
+
+.news-main__item:first-child a {
+    display: flex;
+    column-gap: 5px;
+}
+
+.news-main__item:first-child .news-main__item-img {
+    margin-bottom: 0;
+    flex: 1 1 50%;
+    width: 50%;
+    height: auto;
+}
+
+.news-main__item:first-child .news-main__item-desc {
+    padding: 23px 10px;
+    flex: 1 1 50%;
+    width: 50%;
+
+    @include breakpoint(md) {
+        height: 100%;
+    }
+
+    @include breakpoint(xl) {
+        padding: 24px;
+    }
+}
+
+.news-main__item:first-child .news-main__item-title {
+    font-size: 18px;
+
+    @include breakpoint(lg) {
+        font-size: 20px;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 22px;
+    }
+}
+
+.section-partners {
+    padding-bottom: 40px;
+
+    @include breakpoint(lg) {
+        padding-bottom: 60px;
+    }
+
+    @include breakpoint(xl) {
+        padding-bottom: 85px;
+    }
+}
+
+.partners-head {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include breakpoint(md) {
+        margin-bottom: 40px;
+    }
+
+    @include breakpoint(xl) {
+        margin-bottom: 60px;
+    }
+}
+
+.partners-head .swiper-navigation {
+    display: flex;
+    align-items: center;
+}
+
+.partners-head .slider-arrow {
+
+    @include breakpoint(hd) {
+        position: absolute;
+        top: calc(50% + 20px);
+    }
+}
+
+.partners-head .slider-arrow--prev {
+
+    @include breakpoint(hd) {
+        left: -52px;
+    }
+}
+
+.partners-head .slider-arrow--next {
+
+    @include breakpoint(hd) {
+        right: -52px;
+    }
+}
+
+.partners-head .slider-arrow ~ .slider-arrow {
+    margin-left: 16px;
+}
+
+.partners__logo {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 42px;
+    border: 0.48px solid #38548A;
+
+    @include breakpoint(md) {
+        height: 50px;
+    }
+
+    @include breakpoint(xl) {
+        padding: 20px;
+        height: 90px;
+    }
+}
+
+.partners__logo img {
+    height: 100%;
 }
