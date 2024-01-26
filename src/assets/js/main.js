@@ -1,5 +1,18 @@
 $(document).ready(function() {
 
+    let anchors = document.querySelectorAll('.js-anchor')
+    if (anchors.length > 0) {
+        anchors.forEach(anchor => {
+            anchor.onclick = function (e) {
+                e.preventDefault();
+                document.querySelector(`#${anchor.href.split('#')[1]}`).scrollIntoView({
+                    block: 'start',
+                    behavior: 'smooth',
+                })
+            }
+        })
+    }
+
     // INPUT MASK PHONE NUMBER
     $('input[type="tel"]').inputmask({
         "mask": "+7 (999) 999-99-99",

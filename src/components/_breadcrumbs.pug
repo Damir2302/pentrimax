@@ -25,5 +25,9 @@ mixin breadcrumbs(title, ...items)
             .container
 
                 h1.title= title
+                
+                if bodyClass != 'product-page'
+                    .btn.btn--white-stroke(onclick="history.back()") Назад
 
-                .btn.btn--white-stroke(onclick="history.back()") Назад
+                if bodyClass == 'product-page'
+                    .btn.btn--white-stroke(onclick="history.back()") Назад к списку

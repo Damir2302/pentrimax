@@ -1,0 +1,88 @@
+---
+title: Страница | Главная
+bodyClass: product-page
+---
+
+extends includes/_page
+
+block main
+
+    include components/_breadcrumbs
+    +breadcrumbs('PentriCor EPE 100', 'Продукция', 'Антикоррозионные грунты', 'PentriCor EPE 100')
+
+    section.section-product
+
+        .container
+
+            .product
+
+                .product__image
+                    div
+                        +img('img-1.png')
+                
+                .product__wrap
+                    .product__title 1К грунт с высоким содержанием антикоррозионных пигментов
+                    .product__text Для антикоррозионной защиты металлоконструкций различного назначения с повышенными требованиями к защитным свойствам, эксплуатируемых в условиях загруженной городской среды и промышленной атмосферы. Устойчив к механическим нагрузкам
+
+                .product__info
+                    .product__info-title Документация по продукции
+                    a.product__info-file(href="#")
+                        +img('pdf-icon.svg')
+                        p Технический паспорт
+                    a.product__info-file(href="#")
+                        +img('pdf-icon.svg')
+                        p Информационный проспект
+
+                    .product__action
+                        a.btn.btn--white-stroke.js-anchor(href="#feature")
+                            +img('clipboard-list.svg')
+                            p Характеристики
+
+                        .btn.btn--red(data-src="#popup-price-request" data-fancybox) Узнать цену
+
+                    .products__wraning
+                        .products__wraning-icon
+                            +img('brake-warning.svg')
+                        p <b>Остерегайтесь подделок!</b>  Ознакомьтесь с информацией как отличить оригинал от подделки на странице проверки подлинности продукции
+
+    section.section-feature#feature
+
+        .container
+
+            .section-title Характеристики
+
+            .feature
+                
+                ul
+                    li Нанесение в системе с полиуретановыми двухкомпонентными эмалями методом «мокрый-по-мокрому» для ускорения процесса окрашивания
+                    li Возможность наносить на поверхность со степенью подготовки St 3
+                    li Время высыхания покрытия при толщине 60 мкм – 1 час при t 20°С
+                    li Объемная доля нелетучих веществ (сухой остаток) 48%
+                    li Адгезия - 0 балл по ISO 2409:2013 на холоднокатаном металле
+                    li Защитные качества сопоставимы с дорогостоящими эпоксидными двухкомпонентными грунтами
+                    li Не требует смешивания с отвердителем
+                    li Не имеет ограничений по жизнеспособности
+
+                .feature__guarantee
+                    +img('alphaprotect.svg')
+                    p Гарантия защитных свойств наших покрытий – запатентованная разработка антикоррозионной формулы ALPHAPROTECT®, значительно увеличивающая антикоррозионную защиту металла и ускоряющая время полимеризации без снижения адгезионных и физико-механических показателей.
+
+    section.section-content
+
+        .container
+
+            .content
+
+                h2 Заголовок текста для продвижения h2
+
+                p Lörem ipsum år sverka. Ere multidev fonofaktisk dokul och pugisk. Dösk maneligen dodons sedan gigåhet kagt kode. Behösade decins: liksom disod, makrohör, miliga, vödosm, fredsring. Peheten spessa suplartad däs diskapet butoskapet. Lyrat drevkultur i honär, i hypoktigt, birande om jåtotesm om gal–tan–skala. 
+                    br
+                    br
+                    |Psykologi vartad hexarade inte diktig, lolosan. Bede kakunera. Orade karav liksom prer sykarade pobugt, i beliga med nihedett. Nibejål syrar nyrade i presade, att krosade heterosamma beviliga. Shoppingspion posade sån fast egonat och on att eulanade derade. Äv spegågit inklusive nongar då klittra koll, irade. 
+        
+                h3 Заголовок текста для продвижения h3
+
+                p Lörem ipsum år sverka. Ere multidev fonofaktisk dokul och pugisk. Dösk maneligen dodons sedan gigåhet kagt kode. Behösade decins: liksom disod, makrohör, miliga, vödosm, fredsring. Peheten spessa suplartad däs diskapet butoskapet. Lyrat drevkultur i honär, i hypoktigt, birande om jåtotesm om gal–tan–skala. 
+                    br
+                    br
+                    |Psykologi vartad hexarade inte diktig, lolosan. Bede kakunera. Orade karav liksom prer sykarade pobugt, i beliga med nihedett. Nibejål syrar nyrade i presade, att krosade heterosamma beviliga. Shoppingspion posade sån fast egonat och on att eulanade derade. Äv spegågit inklusive nongar då klittra koll, irade. 
