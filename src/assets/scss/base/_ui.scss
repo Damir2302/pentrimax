@@ -198,11 +198,11 @@ input::placeholder {
 }
 
 .section-content .content {
-    padding: 40px 0;
+    padding: 40px 0 0;
     border-top: 1px solid #38548A;
 
     @include breakpoint(xl) {
-        padding: 40px 0 80px;
+        padding: 40px 0 50px;
     }
 }
 

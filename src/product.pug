@@ -100,3 +100,130 @@ block main
                     .swiper-wrapper
 
                         .swiper-slide
+                            .example__img
+                                +img('example-1.jpg')
+
+                        .swiper-slide
+                            .example__img
+                                +img('example-2.jpg')
+
+                        .swiper-slide
+                            .example__img
+                                +img('example-3.jpg')
+
+                        .swiper-slide
+                            .example__img
+                                +img('example-1.jpg')
+
+                .swiper-navigation
+                    .slider-arrow.slider-arrow--prev
+                        +img('arrow-left.svg')
+
+                    .swiper-pagination
+
+                    .slider-arrow.slider-arrow--next
+                        +img('arrow-right.svg')
+
+            .example-text
+                p PentriCor EPE 100 обладает электропроводностью, не мешает сварке и защищает свариваемые элементы от сварочных брызг. Позволяет осуществлять сварку элементов без потери качества сварочного шва, при этом не образовывает задымления и горения. Зачистка места сваривания от грунта не требуется.
+                p Применяется как самостоятельное покрытие, сварочный грунт, так и в качестве межоперационного грунта в системах с эмалями <a href="#">PentriColor PUR 500</a>, <a href="#">PentriColor PUR 600</a>.
+
+    section.section-protocol
+
+        .container
+
+            .section-title Протоколы испытаний и документы
+
+            .protocol
+
+                .protocol__item
+                    .protocol__item-title ГОСТ 9.401-2018 (метод Б)
+                    .protocol__item-text Стойкость к воздействию соляного тумана (распространение коррозии от надреза)
+
+                .protocol__item
+                    .protocol__item-title ГОСТ 9.401-91 (метод 6)
+                    .protocol__item-text Срок службы в условиях открытой атмосферы промышленной зоны умеренного холодного климата
+
+                .protocol__item
+                    .protocol__item-title Название документа
+                    .protocol__item-text Описание документа в одну или несколько строк текстовой информации
+
+    section.section-mode
+
+        .container
+
+            .section-title Способ применения
+
+            .mode
+
+                .mode__item
+                    .mode__item-title Подготовка к работе:
+                    .mode__item-info При необходимости снижения вязкости для окраски добавить в грунт разбавитель PentriSolv 100.Рабочая вязкость и степень разбавления зависят от условий нанесения и используемого оборудования, точные рекомендации Вам предоставит наш специалист по запросу.
+
+                .mode__item
+                    .mode__item-title Способ нанесения:
+                    .mode__item-info
+                        ul 
+                            li безвоздушное распыление
+                            li пневматическое распыление
+                            li кисть
+                            li валик
+
+                .mode__item
+                    .mode__item-title Подготовка поверхности
+                    .mode__item-info Для изделий, эксплуатирующихся в условиях коррозионной нагрузки С2, С3, очистку поверхности желательно довести минимум до степени St 3, за исключением систем окраски для коррозионной среды С4, для данной категории поверхность необходимо очистить до степени Sa 2,5, в противном случае будет необходимо значительно увеличивать толщину слоя системы.
+
+    section.section-scope
+
+        .container
+
+            .section-title Сферы применения
+
+            .scope
+
+                .scope__item
+                    .scope__item-img
+                        div
+                            +img('image-2.jpg')
+                    .scope__item-title Межоперационные сварочные грунты
+
+    section.section-content
+
+        .container
+
+            .content
+
+                h2 Заголовок текста для продвижения h2
+
+                p Lörem ipsum år sverka. Ere multidev fonofaktisk dokul och pugisk. Dösk maneligen dodons sedan gigåhet kagt kode. Behösade decins: liksom disod, makrohör, miliga, vödosm, fredsring. Peheten spessa suplartad däs diskapet butoskapet. Lyrat drevkultur i honär, i hypoktigt, birande om jåtotesm om gal–tan–skala. 
+                    br
+                    br
+                    |Psykologi vartad hexarade inte diktig, lolosan. Bede kakunera. Orade karav liksom prer sykarade pobugt, i beliga med nihedett. Nibejål syrar nyrade i presade, att krosade heterosamma beviliga. Shoppingspion posade sån fast egonat och on att eulanade derade. Äv spegågit inklusive nongar då klittra koll, irade. 
+        
+                h3 Заголовок текста для продвижения h3
+
+                p Lörem ipsum år sverka. Ere multidev fonofaktisk dokul och pugisk. Dösk maneligen dodons sedan gigåhet kagt kode. Behösade decins: liksom disod, makrohör, miliga, vödosm, fredsring. Peheten spessa suplartad däs diskapet butoskapet. Lyrat drevkultur i honär, i hypoktigt, birande om jåtotesm om gal–tan–skala. 
+                    br
+                    br
+                    |Psykologi vartad hexarade inte diktig, lolosan. Bede kakunera. Orade karav liksom prer sykarade pobugt, i beliga med nihedett. Nibejål syrar nyrade i presade, att krosade heterosamma beviliga. Shoppingspion posade sån fast egonat och on att eulanade derade. Äv spegågit inklusive nongar då klittra koll, irade. 
+
+    section.section-board
+
+        .container
+
+            .board
+
+                .board-contact
+                    .board-contact__title Остались вопросы?
+                    .board-contact__text Свяжитесь с нами и мы всё Вам расскажем!
+                    .board-contact__action
+                        .btn.btn--white-stroke(data-src="#popup-request" data-fancybox) Задать вопрос
+                        .btn.btn--red(data-src="#popup-price-request" data-fancybox) Заказать
+
+                .board-image
+                    +img('pentrimax-bus.jpg')
+
+                .board-info
+                    p Региональные представительства в Москве, Екатеринбурге, Воронеже
+                    a(href="tel:+78003006837") +7 (800) 300-68-37
+                    a(href="mailto:info@pentrimax.ru") info@pentrimax.ru
