@@ -1,0 +1,53 @@
+.news-page {
+
+    .section-news {
+        
+        @include breakpoint(lg) {
+            padding: 40px 0 60px;
+        }
+
+        @include breakpoint(xl) {
+            padding: 40px 0 80px;
+        }
+    }
+
+    .news {
+        margin: 0;
+
+        @include breakpoint(md) {
+            row-gap: 20px;
+        }
+
+        @include breakpoint(xl) {
+            row-gap: 30px;
+        }
+    }
+
+    .news__item {
+
+        @include breakpoint(md) {
+            width: calc(25% - (60px / 4));
+        }
+
+        @include breakpoint(xl) {
+            width: calc(25% - 30px);
+        }
+    }
+
+    .section-news .btn {
+        margin: 40px auto 0;
+        display: flex;
+        width: 344px;
+        height: 52px;
+
+        @include breakpoint(lg) {
+            margin: 60px auto 0;
+            width: 432px;
+        }
+
+        @include breakpoint(xl) {
+            margin: 80px auto 0;
+            width: 480px;
+        }
+    }
+}

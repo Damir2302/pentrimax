@@ -17,19 +17,19 @@ $(document).ready(function() {
         },
     });
 
-    $('.works-slider').each(function(index) {
+    $('.works-block').each(function(index) {
         var $this = $(this);
-        $this.addClass('works-slider-' + index);
+        $this.addClass('works-block-' + index);
 
-        var worksSlider = new Swiper(`.works-slider-${index} .swiper`, {
+        var worksSlider = new Swiper(`.works-block-${index} .swiper`, {
             slidesPerView: 2,
             spaceBetween: 10,
             observer: true,
             observeParents: true,
     
             navigation: {
-                prevEl: `.works-slider-${index} .slider-arrow--prev`,
-                nextEl: `.works-slider-${index} .slider-arrow--next`,
+                prevEl: `.works-block-${index} .slider-arrow--prev`,
+                nextEl: `.works-block-${index} .slider-arrow--next`,
             },
 
             breakpoints: {

@@ -1,0 +1,191 @@
+---
+title: Страница | Продукция
+bodyClass: catalog-page
+---
+
+extends includes/_page
+
+block main
+
+    include components/_breadcrumbs
+    +breadcrumbs('Продукция', 'Продукция')
+
+    section.section-content
+
+        .container
+
+            .content
+
+                h2 Заголовок текста для продвижения h2
+
+                p Lörem ipsum år sverka. Ere multidev fonofaktisk dokul och pugisk. Dösk maneligen dodons sedan gigåhet kagt kode. Behösade decins: liksom disod, makrohör, miliga, vödosm, fredsring. Peheten spessa suplartad däs diskapet butoskapet. Lyrat drevkultur i honär, i hypoktigt, birande om jåtotesm om gal–tan–skala. 
+                    br
+                    br
+                    |Psykologi vartad hexarade inte diktig, lolosan. Bede kakunera. Orade karav liksom prer sykarade pobugt, i beliga med nihedett. Nibejål syrar nyrade i presade, att krosade heterosamma beviliga. Shoppingspion posade sån fast egonat och on att eulanade derade. Äv spegågit inklusive nongar då klittra koll, irade. 
+        
+                h3 Заголовок текста для продвижения h3
+
+                p Lörem ipsum år sverka. Ere multidev fonofaktisk dokul och pugisk. Dösk maneligen dodons sedan gigåhet kagt kode. Behösade decins: liksom disod, makrohör, miliga, vödosm, fredsring. Peheten spessa suplartad däs diskapet butoskapet. Lyrat drevkultur i honär, i hypoktigt, birande om jåtotesm om gal–tan–skala. 
+                    br
+                    br
+                    |Psykologi vartad hexarade inte diktig, lolosan. Bede kakunera. Orade karav liksom prer sykarade pobugt, i beliga med nihedett. Nibejål syrar nyrade i presade, att krosade heterosamma beviliga. Shoppingspion posade sån fast egonat och on att eulanade derade. Äv spegågit inklusive nongar då klittra koll, irade. 
+
+    section.section-stuff
+
+        .container
+
+            .stuff
+
+                .stuff__item
+                    .stuff__item-img
+                        +img('img-1.png')
+                    .stuff__item-title Антикоррозионные грунты
+                    
+                .stuff__item
+                    .stuff__item-img
+                        +img('img-2.png')
+                    .stuff__item-title Специализированные эмали
+
+                .stuff__item
+                    .stuff__item-img
+                        +img('img-3.png')
+                    .stuff__item-title Антикоррозионные грунт-эмали
+
+    section.section-works
+        
+        .works-banner
+
+            .container
+
+                .works-banner__wrap
+
+                    .works-banner__item
+                        .section-title Наша продукция
+                        p Профессиональные составы для защиты от&nbsp;коррозии
+
+                    .works-banner__logo
+                        +img('logo.svg')
+        
+        .container
+
+            .works-block
+            
+                .works-title Антикоррозионные грунты
+
+                .works
+
+                    .works__item
+                        a(href="product.html")
+                            .works__item-img
+                                +img('img-1.png')
+                            .works__item-title Грунт PENTRICOR EPE 100
+                            .works__item-text Грунт быстросохнущий антикоррозионный однокомпонентный
+
+                    .works__item
+                        a(href="product.html")
+                            .works__item-img
+                                +img('img-1.png')
+                            .works__item-title Грунт PENTRICOR EPE 100 Zn 80
+                            .works__item-text Грунт быстросохнущий антикоррозионный однокомпонентный
+                    
+                    .works__item
+                        a(href="product.html")
+                            .works__item-img
+                                +img('img-1.png')
+                            .works__item-title Грунт PENTRICOR EP 150
+                            .works__item-text Грунт быстросохнущий антикоррозионный однокомпонентный
+
+                    .works__item
+                        a(href="product.html")
+                            .works__item-img
+                                +img('img-1.png')
+                            .works__item-title Грунт PENTRICOR EP 300
+                            .works__item-text Грунт быстросохнущий антикоррозионный однокомпонентный
+                    
+                    .works__item
+                        a(href="product.html")
+                            .works__item-img
+                                +img('img-1.png')
+                            .works__item-title Грунт PENTRICOR EPE 100
+                            .works__item-text Грунт быстросохнущий антикоррозионный однокомпонентный
+
+            .works-block
+                
+                .works-title Специализированные эмали
+
+                .works
+
+                    .works__item
+                        a(href="product.html") 
+                            .works__item-img
+                                +img('img-2.png')
+                            .works__item-title Эмаль PENTRICOLOR PUR 500
+                            .works__item-text Эмаль полиуретановая двухкомпонентная цветостойкая
+
+                    .works__item
+                        a(href="product.html") 
+                            .works__item-img
+                                +img('img-2.png')
+                            .works__item-title Эмаль PENTRICOLOR PUR 600
+                            .works__item-text Эмаль полиуретановая двухкомпонентная высокоглянцевая
+            
+            .works-block
+
+                .works-title Антикоррозионные грунт-эмали
+
+                .works
+
+                    .works__item
+                        a(href="product.html") 
+                            .works__item-img
+                                +img('img-3.png')
+                            .works__item-title Грунт-эмаль PENTRIPROTECT EPE 120
+                            .works__item-text Грунт-эмаль антикоррозионная быстросохнущая однокомпонентная
+
+                    .works__item
+                        a(href="product.html") 
+                            .works__item-img
+                                +img('img-3.png')
+                            .works__item-title Грунт-эмаль PENTRIPROTECT PUR 700
+                            .works__item-text Грунт-эмаль антикоррозионная быстросохнущая однокомпонентная
+                    
+                    .works__item
+                        a(href="product.html") 
+                            .works__item-img
+                                +img('img-3.png')
+                            .works__item-title Грунт-эмаль PENTRIPROTECT EP 330
+                            .works__item-text Грунт-эмаль антикоррозионная быстросохнущая однокомпонентная
+
+                    .works__item
+                        a(href="product.html") 
+                            .works__item-img
+                                +img('img-3.png')
+                            .works__item-title Грунт-эмаль PENTRIPROTECT 80
+                            .works__item-text Грунт-эмаль антикоррозионная быстросохнущая однокомпонентная
+                    
+                    .works__item
+                        a(href="product.html") 
+                            .works__item-img
+                                +img('img-3.png')
+                            .works__item-title Грунт-эмаль PENTRIPROTECT EPE 120
+                            .works__item-text Грунт-эмаль антикоррозионная быстросохнущая однокомпонентная
+
+    section.section-content
+
+        .container
+
+            .content
+
+                h2 Заголовок текста для продвижения h2
+
+                p Lörem ipsum år sverka. Ere multidev fonofaktisk dokul och pugisk. Dösk maneligen dodons sedan gigåhet kagt kode. Behösade decins: liksom disod, makrohör, miliga, vödosm, fredsring. Peheten spessa suplartad däs diskapet butoskapet. Lyrat drevkultur i honär, i hypoktigt, birande om jåtotesm om gal–tan–skala. 
+                    br
+                    br
+                    |Psykologi vartad hexarade inte diktig, lolosan. Bede kakunera. Orade karav liksom prer sykarade pobugt, i beliga med nihedett. Nibejål syrar nyrade i presade, att krosade heterosamma beviliga. Shoppingspion posade sån fast egonat och on att eulanade derade. Äv spegågit inklusive nongar då klittra koll, irade. 
+        
+                h3 Заголовок текста для продвижения h3
+
+                p Lörem ipsum år sverka. Ere multidev fonofaktisk dokul och pugisk. Dösk maneligen dodons sedan gigåhet kagt kode. Behösade decins: liksom disod, makrohör, miliga, vödosm, fredsring. Peheten spessa suplartad däs diskapet butoskapet. Lyrat drevkultur i honär, i hypoktigt, birande om jåtotesm om gal–tan–skala. 
+                    br
+                    br
+                    |

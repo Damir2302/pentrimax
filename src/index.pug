@@ -153,19 +153,24 @@ block main
                     .company__wrap
 
                         .company__item
-                            .company__item-number 21
+                            .company__item-number
+                                .spincrement 21
                             .company__item-text год на рынке промышленных покрытий
 
                         .company__item
-                            .company__item-number 24
+                            .company__item-number
+                                .spincrement 24
                             .company__item-text от 24 часов срок исполнения заказов
 
                         .company__item
-                            .company__item-number 3 000+
+                            .company__item-number
+                                .spincrement 3 000
+                                span +
                             .company__item-text реализованных проектов
 
                         .company__item
-                            .company__item-number 25 000
+                            .company__item-number
+                                .spincrement 25 000
                             .company__item-text тонн годовая производственная мощность
 
     section.section-scope
@@ -247,59 +252,9 @@ block main
         
         .container
 
-            .works-slider
+            .works-block
 
-                .slider-title Антикоррозионные грунты
-
-                .swiper-navigation
-                    .slider-arrow.slider-arrow--prev
-                        +img('arrow-left.svg')
-
-                    .slider-arrow.slider-arrow--next
-                        +img('arrow-right.svg')
-
-                .swiper
-
-                    .swiper-wrapper
-
-                        .slider__item.swiper-slide
-                            a(href="product.html")
-                                .slider__item-img
-                                    +img('img-1.png')
-                                .slider__item-title Грунт PENTRICOR EPE 100
-                                .slider__item-text Грунт быстросохнущий антикоррозионный однокомпонентный
-
-                        .slider__item.swiper-slide
-                            a(href="product.html")
-                                .slider__item-img
-                                    +img('img-1.png')
-                                .slider__item-title Грунт PENTRICOR EPE 100 Zn 80
-                                .slider__item-text Грунт быстросохнущий антикоррозионный однокомпонентный
-                        
-                        .slider__item.swiper-slide
-                            a(href="product.html")
-                                .slider__item-img
-                                    +img('img-1.png')
-                                .slider__item-title Грунт PENTRICOR EP 150
-                                .slider__item-text Грунт быстросохнущий антикоррозионный однокомпонентный
-
-                        .slider__item.swiper-slide
-                            a(href="product.html")
-                                .slider__item-img
-                                    +img('img-1.png')
-                                .slider__item-title Грунт PENTRICOR EP 300
-                                .slider__item-text Грунт быстросохнущий антикоррозионный однокомпонентный
-                        
-                        .slider__item.swiper-slide
-                            a(href="product.html")
-                                .slider__item-img
-                                    +img('img-1.png')
-                                .slider__item-title Грунт PENTRICOR EPE 100
-                                .slider__item-text Грунт быстросохнущий антикоррозионный однокомпонентный
-
-            .works-slider
-
-                .slider-title Специализированные эмали
+                .works-title Антикоррозионные грунты
 
                 .swiper-navigation
                     .slider-arrow.slider-arrow--prev
@@ -312,23 +267,73 @@ block main
 
                     .swiper-wrapper
 
-                        .slider__item.swiper-slide
+                        .works__item.swiper-slide
+                            a(href="product.html")
+                                .works__item-img
+                                    +img('img-1.png')
+                                .works__item-title Грунт PENTRICOR EPE 100
+                                .works__item-text Грунт быстросохнущий антикоррозионный однокомпонентный
+
+                        .works__item.swiper-slide
+                            a(href="product.html")
+                                .works__item-img
+                                    +img('img-1.png')
+                                .works__item-title Грунт PENTRICOR EPE 100 Zn 80
+                                .works__item-text Грунт быстросохнущий антикоррозионный однокомпонентный
+                        
+                        .works__item.swiper-slide
+                            a(href="product.html")
+                                .works__item-img
+                                    +img('img-1.png')
+                                .works__item-title Грунт PENTRICOR EP 150
+                                .works__item-text Грунт быстросохнущий антикоррозионный однокомпонентный
+
+                        .works__item.swiper-slide
+                            a(href="product.html")
+                                .works__item-img
+                                    +img('img-1.png')
+                                .works__item-title Грунт PENTRICOR EP 300
+                                .works__item-text Грунт быстросохнущий антикоррозионный однокомпонентный
+                        
+                        .works__item.swiper-slide
+                            a(href="product.html")
+                                .works__item-img
+                                    +img('img-1.png')
+                                .works__item-title Грунт PENTRICOR EPE 100
+                                .works__item-text Грунт быстросохнущий антикоррозионный однокомпонентный
+
+            .works-block
+
+                .works-title Специализированные эмали
+
+                .swiper-navigation
+                    .slider-arrow.slider-arrow--prev
+                        +img('arrow-left.svg')
+
+                    .slider-arrow.slider-arrow--next
+                        +img('arrow-right.svg')
+
+                .swiper
+
+                    .swiper-wrapper
+
+                        .works__item.swiper-slide
                             a(href="product.html") 
-                                .slider__item-img
+                                .works__item-img
                                     +img('img-2.png')
-                                .slider__item-title Эмаль PENTRICOLOR PUR 500
-                                .slider__item-text Эмаль полиуретановая двухкомпонентная цветостойкая
+                                .works__item-title Эмаль PENTRICOLOR PUR 500
+                                .works__item-text Эмаль полиуретановая двухкомпонентная цветостойкая
 
-                        .slider__item.swiper-slide
+                        .works__item.swiper-slide
                             a(href="product.html") 
-                                .slider__item-img
+                                .works__item-img
                                     +img('img-2.png')
-                                .slider__item-title Эмаль PENTRICOLOR PUR 600
-                                .slider__item-text Эмаль полиуретановая двухкомпонентная высокоглянцевая
+                                .works__item-title Эмаль PENTRICOLOR PUR 600
+                                .works__item-text Эмаль полиуретановая двухкомпонентная высокоглянцевая
                         
-            .works-slider
+            .works-block
 
-                .slider-title Антикоррозионные грунт-эмали
+                .works-title Антикоррозионные грунт-эмали
 
                 .swiper-navigation
                     .slider-arrow.slider-arrow--prev
@@ -341,40 +346,40 @@ block main
 
                     .swiper-wrapper
 
-                        .slider__item.swiper-slide
+                        .works__item.swiper-slide
                             a(href="product.html") 
-                                .slider__item-img
+                                .works__item-img
                                     +img('img-3.png')
-                                .slider__item-title Грунт-эмаль PENTRIPROTECT EPE 120
-                                .slider__item-text Грунт-эмаль антикоррозионная быстросохнущая однокомпонентная
+                                .works__item-title Грунт-эмаль PENTRIPROTECT EPE 120
+                                .works__item-text Грунт-эмаль антикоррозионная быстросохнущая однокомпонентная
 
-                        .slider__item.swiper-slide
+                        .works__item.swiper-slide
                             a(href="product.html") 
-                                .slider__item-img
+                                .works__item-img
                                     +img('img-3.png')
-                                .slider__item-title Грунт-эмаль PENTRIPROTECT PUR 700
-                                .slider__item-text Грунт-эмаль антикоррозионная быстросохнущая однокомпонентная
+                                .works__item-title Грунт-эмаль PENTRIPROTECT PUR 700
+                                .works__item-text Грунт-эмаль антикоррозионная быстросохнущая однокомпонентная
                         
-                        .slider__item.swiper-slide
+                        .works__item.swiper-slide
                             a(href="product.html") 
-                                .slider__item-img
+                                .works__item-img
                                     +img('img-3.png')
-                                .slider__item-title Грунт-эмаль PENTRIPROTECT EP 330
-                                .slider__item-text Грунт-эмаль антикоррозионная быстросохнущая однокомпонентная
+                                .works__item-title Грунт-эмаль PENTRIPROTECT EP 330
+                                .works__item-text Грунт-эмаль антикоррозионная быстросохнущая однокомпонентная
 
-                        .slider__item.swiper-slide
+                        .works__item.swiper-slide
                             a(href="product.html") 
-                                .slider__item-img
+                                .works__item-img
                                     +img('img-3.png')
-                                .slider__item-title Грунт-эмаль PENTRIPROTECT 80
-                                .slider__item-text Грунт-эмаль антикоррозионная быстросохнущая однокомпонентная
+                                .works__item-title Грунт-эмаль PENTRIPROTECT 80
+                                .works__item-text Грунт-эмаль антикоррозионная быстросохнущая однокомпонентная
                         
-                        .slider__item.swiper-slide
+                        .works__item.swiper-slide
                             a(href="product.html") 
-                                .slider__item-img
+                                .works__item-img
                                     +img('img-3.png')
-                                .slider__item-title Грунт-эмаль PENTRIPROTECT EPE 120
-                                .slider__item-text Грунт-эмаль антикоррозионная быстросохнущая однокомпонентная
+                                .works__item-title Грунт-эмаль PENTRIPROTECT EPE 120
+                                .works__item-text Грунт-эмаль антикоррозионная быстросохнущая однокомпонентная
 
     section.section-filial
 
@@ -465,41 +470,41 @@ block main
                 +img('truck-container.svg')
                 p Доставка по всей России транспортными компаниями: Деловые Линии, ПЭК, Vozovoz и другими.
 
-    section.section-news-main
+    section.section-news
 
         .container
             
-            .news-main-head
+            .news-head
             
                 .section-title Новости
                 a.btn.btn--white-stroke(href="news.html") Смотреть все новости
 
-            .news-main
+            .news
 
-                .news-main__item
-                    a(href="#") 
-                        .news-main__item-img
+                .news__item
+                    a(href="news-inner.html") 
+                        .news__item-img
                             +img('news-1.jpg')
-                        .news-main__item-desc
-                            .news-main__item-date 14 Дек, 23
-                            .news-main__item-title(title="title") Lörem ipsum miktigt tidsfönster spende, och semijålogi. Del astrojågen vissade.
-                            .news-main__item-text Lörem ipsum miktigt tidsfönster spende, och semijålogi. Del astrojågen vissade.
+                        .news__item-desc
+                            .news__item-date 14 Дек, 23
+                            .news__item-title(title="title") Lörem ipsum miktigt tidsfönster spende, och semijålogi. Del astrojågen vissade.
+                            .news__item-text Lörem ipsum miktigt tidsfönster spende, och semijålogi. Del astrojågen vissade.
 
-                .news-main__item
-                    a(href="#") 
-                        .news-main__item-img
+                .news__item
+                    a(href="news-inner.html") 
+                        .news__item-img
                             +img('news-2.jpg')
-                        .news-main__item-desc
-                            .news-main__item-date 14 Дек, 23
-                            .news-main__item-title(title="title") Lörem ipsum miktigt tidsfönster spende, och semijålogi. Del astrojågen vissade.
+                        .news__item-desc
+                            .news__item-date 14 Дек, 23
+                            .news__item-title(title="title") Lörem ipsum miktigt tidsfönster spende, och semijålogi. Del astrojågen vissade.
                 
-                .news-main__item
-                    a(href="#") 
-                        .news-main__item-img
+                .news__item
+                    a(href="news-inner.html") 
+                        .news__item-img
                             +img('news-3.jpg')
-                        .news-main__item-desc
-                            .news-main__item-date 14 Дек, 23
-                            .news-main__item-title(title="title") Lörem ipsum miktigt tidsfönster spende, och semijålogi. Del astrojågen vissade.
+                        .news__item-desc
+                            .news__item-date 14 Дек, 23
+                            .news__item-title(title="title") Lörem ipsum miktigt tidsfönster spende, och semijålogi. Del astrojågen vissade.
 
     section.section-partners
 

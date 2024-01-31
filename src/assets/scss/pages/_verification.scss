@@ -1,0 +1,518 @@
+.section-brand {
+    padding: 40px 0;
+
+    @include breakpoint(lg) {
+        padding: 60px 0;
+    }
+
+    @include breakpoint(xl) {
+        padding: 80px 0;
+    }
+}
+
+.brand {
+    display: flex;
+
+    @include breakpointMax(lg) {
+        flex-direction: column;
+    }
+    
+    @include breakpoint(lg) {
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+}
+
+.brand__text {
+
+    @include breakpointMax(lg) {
+        order: 2;
+    }
+
+    @include breakpoint(lg) {
+        width: calc(50% - 10px);
+    }
+
+    @include breakpoint(xl) {
+        width: calc(50% - 15px);
+        font-size: 20px;
+    }
+}
+
+.brand__image {
+    padding-bottom: 54.81%;
+    position: relative;
+    border: 1px solid #38548A;
+
+    @include breakpointMax(lg) {
+        margin-bottom: 20px;
+        order: 1;
+    }
+
+    @include breakpoint(lg) {
+        padding-bottom: 27.32%;
+        width: calc(50% - 10px);
+    }
+
+    @include breakpoint(xl) {
+        padding-bottom: 26.6%;
+        width: calc(50% - 15px);
+    }
+}
+
+.brand__image img {
+    padding: 14px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-attention {
+    padding-bottom: 40px;
+
+    @include breakpoint(lg) {
+        padding-bottom: 60px;
+    }
+
+    @include breakpoint(xl) {
+        padding-bottom: 80px;
+    }
+}
+
+.section-attention .section-title {
+    margin-bottom: 20px;
+
+    @include breakpoint(md) {
+        margin-bottom: 30px;
+    }
+
+    @include breakpoint(lg) {
+        margin-bottom: 40px;
+    }
+
+    @include breakpoint(xl) {
+        margin-bottom: 80px;
+    }
+}
+
+.attention {
+
+    @include breakpoint(lg) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.attention__item {
+    display: flex;
+    align-items: flex-start;
+
+    @include breakpoint(lg) {
+        width: calc(100% / 3 - 20px);
+    }
+}
+
+.attention__item ~ .attention__item {
+    
+    @include breakpointMax(lg) {
+        margin-top: 20px;
+    }
+}
+
+.attention__item-number {
+    margin-right: 30px;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 100%;
+    color:#38548A;
+
+    @include breakpoint(xl) {
+        font-size: 48px;
+    }
+}
+
+.attention__item-text {
+    
+    @include breakpointMax(xl) {
+        font-size: 15px;
+    }
+}
+
+.note {
+    margin-top: 40px;
+    padding-left: 30px;
+    border-left: 3px solid $red;
+
+    @include breakpoint(lg) {
+        margin-top: 60px;
+    }
+
+    @include breakpoint(xl) {
+        margin-top: 80px;
+    }
+}
+
+.note__title {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+
+    @include breakpoint(md) {
+        font-size: 18px;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 20px;
+    }
+}
+
+.section-verification {
+    padding-bottom: 40px;
+
+    @include breakpoint(lg) {
+        padding-bottom: 60px;
+    }
+
+    @include breakpoint(xl) {
+        padding-bottom: 80px;
+    }
+}
+
+.verification-head {
+
+    @include breakpoint(md) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.section-verification .section-title {
+    
+    @include breakpointMax(md) {
+        margin-bottom: 20px;
+    }
+
+    @include breakpoint(md) {
+        width: 100%;
+        max-width: 278px;
+    }
+
+    @include breakpoint(lg) {
+        max-width: 434px;
+    }
+
+    @include breakpoint(xl) {
+        margin-right: 40px;
+        max-width: 600px;
+    }
+}
+
+.checking {
+    width: 100%;
+    user-select: none;
+}
+
+.checking-block {
+    position: relative;
+    width: 100%;
+    max-width: 354px;
+    border-radius: 11px;
+    overflow: hidden;
+
+    @include breakpoint(md) {
+        
+        @include breakpointMax(xl) {
+            margin-left: auto;
+        }
+    }
+}
+
+.checking-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 95px;
+    border-radius: 11px;
+    border: 1px dashed #FFF;
+    box-shadow: 0px 1px 2px 0px rgba(105, 81, 255, 0.05);
+    overflow: hidden;
+}
+
+.checking-item span {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 8px;
+    opacity: 0;
+    animation: opacity 8s ease infinite;
+}
+
+@keyframes opacity {
+    0% { opacity: 0; }
+    40% { opacity: 1; }
+    95% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.checking-item span::before {
+    content: "";
+    background: $blue-dark;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    animation: line 8s ease infinite;
+    z-index: 1;
+}
+
+@keyframes line {
+    0% { left: 0%; }
+    40% { left: 100%; }
+    95% { left: 100%; }
+    100% { left: 0%; }
+}
+
+.checking-front {
+    background: #5EB85C;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 11px;
+    animation: slide 8s ease infinite;
+    z-index: 1;
+}
+
+@keyframes slide {
+    0% { left: -100%; opacity: 1; }
+    60% { left: -100%; opacity: 1; }
+    65% { left: 0%; opacity: 1; }
+    98% { left: 0%; opacity: 1; }
+    100% { left: 0%; opacity: 0; }
+}
+
+.checking-front  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checking-front img {
+    margin-right: 30px;
+    width: 34px;
+    height: 51px;
+    opacity: 0;
+    animation: slideUp 8s ease infinite;
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(25px); opacity: 0; }
+    65% { transform: translateY(25px); opacity: 0; }
+    70% { transform: translateY(0px); opacity: 1; }
+    100% { transform: translateY(0px); opacity: 1; }
+}
+
+.checking-front p {
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0;
+    animation: fadeIn 8s ease infinite;
+
+    @include breakpoint(lg) {
+        font-size: 18px;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 20px;
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    65% { opacity: 0; }
+    70% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+.verification {
+    margin-top: 40px;
+
+    @include breakpoint(lg) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.verification__block {
+    padding: 30px;
+    border: 1px solid #38548A;
+
+    @include breakpoint(lg) {
+        width: calc(50% - 10px);
+    }
+
+    @include breakpoint(xl) {
+        width: calc(50% - 15px);
+    }
+}
+
+.verification__block ~ .verification__block {
+
+    @include breakpointMax(lg) {
+        margin-top: 20px;
+    }
+}
+
+.verification__block-title {
+    display: flex;
+    align-items: center;
+}
+
+.verification__block-icon {
+    margin-right: 15px;
+    background: $red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+}
+
+.verification__block-icon img {
+    width: 25px;
+    height: 33px;
+}
+
+.verification__block-title p {
+    font-size: 20px;
+    font-weight: 500;
+
+    @include breakpoint(xl) {
+        font-size: 30px;
+    }
+}
+
+.verification__step {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(md) {
+        margin-top: 40px;
+    }
+}
+
+.verification__step-number {
+    margin-right: 10px;
+    flex-shrink: 0;
+    width: 42px;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 100%;
+    color: #38548A;
+    text-align: center;
+}
+
+.verification__form {
+    margin-top: 20px;
+
+    @include breakpoint(md) {
+        margin-top: 40px;
+    }
+}
+
+.verification__form .input-style {
+    background: #3A4160;
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+
+    @include breakpoint(md) {
+        max-width: 370px;
+    }
+
+    @include breakpoint(xl) {
+        max-width: 390px;
+    }
+}
+
+.verification__form .input-style label {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    transition: all .3s ease;
+    cursor: text;
+
+    @include breakpointMax(md) {
+        max-width: 220px;
+    }
+
+    @include breakpoint(md) {
+        top: 30px;
+    }
+}
+
+.verification__form .input-style.focus label {
+    top: 4px;
+    font-size: 12px;
+    
+    @include breakpoint(md) {
+        top: 10px;
+    }
+}
+
+.verification__form .input-style input {
+    padding: 40px 30px 2px;
+    width: 100%;
+    height: 80px;
+    box-shadow: 0px 1px 2px 0px rgba(105, 81, 255, 0.05);
+    border: none;
+
+    @include breakpoint(md) {
+        padding: 30px 30px 15px;
+    }
+}
+
+.verification__form .input-style input.error {
+    border: 1px solid $red;
+}
+
+.verification__form button {
+    margin-top: 40px;
+    width: 178px;
+    height: 52px;
+}
+
+.verification__form p {
+    margin-top: 20px;
+
+    @include breakpoint(md) {
+        margin-top: 40px;
+        font-size: 14px;
+    }
+}
+
+.notify {
+    margin: 20px 0;
+    padding: 16px;
+    background: #38548A;
+    display: block;
+    box-shadow: 0px 1px 2px 0px rgba(105, 81, 255, 0.05);
+
+    @include breakpoint(md) {
+        margin: 40px 0;
+    }
+}

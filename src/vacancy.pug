@@ -1,0 +1,35 @@
+---
+title: Страница | Вакансии
+bodyClass: vacancy-page
+---
+
+extends includes/_page
+
+block main
+
+    include components/_breadcrumbs
+    +breadcrumbs('Вакансии', 'О компании', 'Вакансии')
+
+    section.section-vacancy
+
+        .container
+
+            .vacancy-wrap
+
+                .vacancy-aside
+
+                    .vacancy-aside__title Для трудоустройства на работу отправьте резюме на адрес <a href="mailto:hr@pentrimax.ru">hr@pentrimax.ru</a>
+                    
+                    .vacancy-aside__phone
+                        p Телефон отдела кадров:
+                        a(href="tel:88003006837") 8 (800) 300-68-37
+
+                    .vacancy-aside__link
+                        +img('hh.ru.svg')
+                        p Больше вакансий на <a href="hh.ru">hh.ru</a>
+
+                .vacancy
+
+                    .vacancy__title Технолог ЛКМ по технической поддержке (жидкие ЛКМ)
+                    .vacancy__salary от 70 000 ₽ на руки
+                    .vacancy__info Требуемый опыт работы: 3–6 лет<br>Полная занятость, полный день

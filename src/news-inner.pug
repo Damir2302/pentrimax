@@ -1,0 +1,83 @@
+---
+title: Страница | Название новости
+bodyClass: news-page news-page-inner
+---
+
+extends includes/_page
+
+block main
+
+    include components/_breadcrumbs
+    +breadcrumbs('Название новости', 'О компании', 'Новости', 'Название новости')
+
+    section.section-content
+
+        .container
+
+            .main-content
+                
+                .main-content__image
+                    +img('news.jpg')
+                
+                .main-content__desc
+                
+                    .main-content-date 21.11.23
+                    
+                    .main-content-text Окрасить и защитить от коррозии металлические конструкции на длительный срок - задача требующая особо тщательного подхода к подготовке металла перед окраской.К сожалению, не всегда удается убрать все загрязнения и прокатную окалину.
+                        br
+                        br
+                        |Понимая этот фактор, мы разработали эпоксидный грунт PentriCor EP 300 со специальными функциональными добавками на основе нашей запатентованной формулы ALPHAPROTECT®, позволяющий свести к минимуму нарушение покрытия из-за ошибок в подготовке металла к окраске.
+
+            .content
+
+                h2 H2 Headline
+
+                p Окрасить и защитить от коррозии металлические конструкции на длительный срок - задача требующая особо тщательного подхода к подготовке металла перед окраской.К сожалению, не всегда удается убрать все загрязнения и прокатную окалину.
+                    br
+                    br
+                    |Понимая этот фактор, мы разработали эпоксидный грунт PentriCor EP 300 со специальными функциональными добавками на основе нашей запатентованной формулы ALPHAPROTECT®, позволяющий свести к минимуму нарушение покрытия из-за ошибок в подготовке металла к окраске.
+                    br
+                    br
+                    |Очень быстрая полимеризация грунта PentriCor EP 300 позволяет производить окраску конструкций в максимально сжатые сроки.Грунт PentriCor EP 300 полимеризуется до конечной твердости при 200мкм ТСП (Толщина Сухого Покрытия) и температуре 10-12°С за 6 часов, при температуре 20°С за 3 часа.
+                    br
+                    |В системе с полиуретановой эмалью PentriColor PUR 500 достигается защита металла от коррозии на длительный срок в условиях сильнозагрязненной промышленной среды, категории коррозионной активности C4-С5.Эмаль обладает высокой стойкостью цветового оттенка при эксплуатации окрашенных конструкций под воздействием активного ультрафиолетового излучения.
+    
+    section.section-news
+
+        .container
+
+            .section-title Читайте также
+
+            .news
+
+                .news__item
+                    a(href="news-inner.html") 
+                        .news__item-img
+                            +img('news-1.jpg')
+                        .news__item-desc
+                            .news__item-date 14 Дек, 23
+                            .news__item-title(title="title") Lörem ipsum miktigt tidsfönster spende, och semijålogi. Del astrojågen vissade.
+
+                .news__item
+                    a(href="news-inner.html") 
+                        .news__item-img
+                            +img('news-2.jpg')
+                        .news__item-desc
+                            .news__item-date 14 Дек, 23
+                            .news__item-title(title="title") Lörem ipsum miktigt tidsfönster spende, och semijålogi. Del astrojågen vissade.
+                
+                .news__item
+                    a(href="news-inner.html") 
+                        .news__item-img
+                            +img('news-3.jpg')
+                        .news__item-desc
+                            .news__item-date 14 Дек, 23
+                            .news__item-title(title="title") Lörem ipsum miktigt tidsfönster spende, och semijålogi. Del astrojågen vissade.
+
+                .news__item
+                    a(href="news-inner.html") 
+                        .news__item-img
+                            +img('news-2.jpg')
+                        .news__item-desc
+                            .news__item-date 14 Дек, 23
+                            .news__item-title(title="title") Lörem ipsum miktigt tidsfönster spende, och semijålogi. Del astrojågen vissade.
