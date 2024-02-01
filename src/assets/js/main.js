@@ -115,6 +115,19 @@ $(document).ready(function() {
         }
     });
 
+    // VACANCY
+    $('.vacancy__expand').on('click', (e) => {
+        if (!$(e.target).hasClass('active')) {
+            $(e.target).parent().find('.vacancy__content > div').slideDown();
+            $(e.target).addClass('active');
+            $(e.target).text('Свернуть описание');
+        } else {
+            $(e.target).parent().find('.vacancy__content > div').slideUp();
+            $(e.target).removeClass('active');
+            $(e.target).text('Подробнее');
+        }
+    });
+
 });
 
 

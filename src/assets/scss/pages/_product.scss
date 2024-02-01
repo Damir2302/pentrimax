@@ -1,3 +1,13 @@
+.product-page {
+
+    .board {
+        
+        @include breakpoint(xl) {
+            border-top: 1px solid #38548A;
+        }
+    }
+}
+
 .section-product {
    
     @include breakpoint(md) {
@@ -651,7 +661,6 @@
         padding-top: 80px;
         display: flex;
         justify-content: space-between;
-        border-top: 1px solid #38548A;
     }
 }
 

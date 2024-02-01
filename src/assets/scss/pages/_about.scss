@@ -1,0 +1,360 @@
+.about-page {
+
+    .section-company {
+        padding: 40px 0;
+
+        @include breakpoint(lg) {
+            padding: 60px 0;
+        }
+
+        @include breakpoint(xl) {
+            padding: 80px 0;
+        }
+    }
+}
+
+.section-about {
+    padding: 40px 0;
+
+    @include breakpoint(lg) {
+        padding: 60px 0;
+    }
+
+    @include breakpoint(xl) {
+        padding: 40px 0 80px;
+    }
+}
+
+.about {
+    
+    @include breakpoint(lg) {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+}
+
+.about__image {
+    margin-bottom: 20px;
+    padding-bottom: 54.81%;
+    position: relative;
+    border: 1px solid #38548A;
+
+    @include breakpoint(lg) {
+        margin-bottom: 0;
+        padding-bottom: 27.31%;
+        width: calc(50% - 10px);
+    }
+
+    @include breakpoint(xl) {
+        width: calc(50% - 15px);
+    }
+}
+
+.about__image div {
+    padding: 14px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.about__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about__desc {
+
+    @include breakpoint(lg) {
+        width: calc(50% - 10px);
+    }
+
+    @include breakpoint(xl) {
+        width: calc(50% - 15px);
+    }
+}
+
+.about__desc p {
+
+    @include breakpoint(xl) {
+        font-size: 20px;
+    }
+}
+
+.about__links {
+    margin-top: 20px;
+    display: flex;
+
+    @include breakpoint(xl) {
+        margin-top: 30px;
+    }
+}
+
+.about__links .btn {
+    
+    @include breakpointMax(md) {
+        width: 50%;
+        height: 52px;
+        max-width: 180px;
+    }
+
+    @include breakpoint(md) {
+        padding: 14px 30px;
+    }
+}
+
+.about__links .btn ~ .btn {
+    margin-left: 10px;
+
+    @include breakpoint(md) {
+        margin-left: 20px;
+    }
+
+    @include breakpoint(lg) {
+        margin-left: 30px;
+    }
+}
+
+.section-company ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    list-style: none;
+
+    @include breakpoint(md) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 20px;
+        row-gap: 30px;
+    }
+
+    @include breakpoint(lg) {
+        column-gap: 30px;
+        row-gap: 40px;
+    }
+
+    @include breakpoint(xl) {
+        row-gap: 60px;
+    }
+}
+
+.section-company ul li {
+    display: flex;
+
+    @include breakpoint(md) {
+        width: calc(50% - 10px);
+    }
+
+    @include breakpoint(lg) {
+        width: calc(50% - 15px);
+        font-size: 18px;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 20px;
+    }
+}
+
+.section-company ul li::before {
+    content: "";
+    margin-right: 5px;
+    background: url('../images/chevron_right.svg') no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    transform: rotate(90deg);
+
+    @include breakpoint(lg) {
+        margin-right: 28px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.section-history {
+    padding: 40px 0;
+
+    @include breakpoint(lg) {
+        padding: 60px 0;
+    }
+
+    @include breakpoint(xl) {
+        padding: 80px 0;
+    }
+}
+
+.section-history .section-title {
+    margin-bottom: 40px;
+}
+
+.history-info {
+    margin-bottom: 40px;
+    padding-right: 30px;
+    display: flex;
+    font-size: 16px;
+    font-weight: 500;
+
+    @include breakpoint(lg) {
+        font-size: 18px;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 20px;
+    }
+}
+
+.history-info::before {
+    content: "";
+    padding-right: 30px;
+    border-left: 3px solid $red;
+}
+
+.history {
+
+    @include breakpoint(md) {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+}
+
+.history__image {
+    margin-bottom: 20px;
+    padding-bottom: 132%;
+    position: relative;
+    border: 1px solid #38548A;
+
+    @include breakpoint(md) {
+        margin-bottom: 0;
+        padding-bottom: 37.5%;
+        width: calc(100% / 12 * 4 - 10px);
+    }
+
+    @include breakpoint(lg) {
+        padding-bottom: 30.9%;
+        width: calc(100% / 12 * 3 - 15px);
+    }
+}
+
+.history__image div {
+    padding: 14px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.history__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.history__info {
+
+    @include breakpoint(md) {
+        width: calc(100% / 12 * 8 - 10px);
+    }
+
+    @include breakpoint(lg) {
+        width: calc(100% / 12 * 9 - 15px);
+    }
+}
+
+.history__info p {
+    line-height: 140%;
+}
+
+.section-advantages {
+    padding-bottom: 40px;
+
+    @include breakpoint(lg) {
+        padding-bottom: 60px;
+    }
+
+    @include breakpoint(xl) {
+        padding-bottom: 0;
+    }
+}
+
+.section-advantages .section-title {
+    margin-bottom: 40px;
+
+    @include breakpoint(xl) {
+        margin-bottom: 80px;
+    }
+}
+
+.advantages {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    @include breakpoint(md) {
+        flex-direction: row;
+        column-gap: 30px;
+    }
+}
+
+.advantages__item {
+    
+    @include breakpointMax(md) {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    @include breakpoint(lg) {
+        display: flex;
+        align-items: flex-start;
+    }
+}
+
+.advantages__item-icon {
+    margin-right: 16px;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+
+    @include breakpoint(md) {
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+
+    @include breakpoint(lg) {
+        margin-right: 16px;
+        margin-bottom: 0;
+    }
+
+    @include breakpoint(xl) {
+        margin-right: 40px;
+        width: 86px;
+        height: 86px;
+    }
+}
+
+.advantages__item-title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 130%;
+
+    @include breakpoint(lg) {
+        font-size: 20px;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 22px;
+    }
+}
+
+.advantages__item-title p {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 400;
+
+    @include breakpoint(md) {
+        font-size: 16px;
+    }
+}

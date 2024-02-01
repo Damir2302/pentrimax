@@ -34,6 +34,24 @@ block popups
                     p Даю согласие на <a href="#">обработку персональных данных</a>
                 button.btn.btn--blue(type="submit") Отправить
 
+    // ПОПАП "ОТКЛИКНУТЬСЯ"
+    #popup-reply.popup
+        .popup-title Откликнуться
+        .popup-subtitle на вакансию
+
+        .popup-form
+            form
+                input(type="text" name="reply_name" placeholder="Представьтесь")
+                input(type="tel" name="reply_phone" placeholder="+7")
+                input(type="email" name="reply_email" placeholder="E-mail:")
+                textarea(name="reply_text" placeholder="Кратко о себе:")
+                .agreement
+                    .checkbox-style
+                        input#agree_reply(type="checkbox" checked name="agree_reply" style="display:none")
+                        label(for="agree_reply")
+                    p Даю согласие на <a href="#">обработку персональных данных</a>
+                button.btn.btn--blue(type="submit") Отправить
+
     // ПОПАП "УСПЕШНО"
     #popup-success.popup.popup-success
         .popup-title Спасибо

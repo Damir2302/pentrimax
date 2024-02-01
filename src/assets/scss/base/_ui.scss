@@ -98,7 +98,7 @@ ul {
     padding-left: 16px;
 }
 
-input {
+input, textarea {
     padding: 20px;
     background: transparent;
     width: 100%;
@@ -113,7 +113,8 @@ input {
     }
 }
 
-input::placeholder {
+input::placeholder,
+textarea::placeholder {
     font-size: 14px;
     color: #fff;
 
@@ -132,6 +133,7 @@ input::placeholder {
     font-weight: 400;
     line-height: 150%;
     cursor: pointer;
+    user-select: none;
     transition: all .3s ease-out;
 }
 

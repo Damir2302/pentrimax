@@ -1,0 +1,39 @@
+---
+title: Страница | Каталог цветов
+bodyClass: colors-page
+---
+
+extends includes/_page
+
+block main
+
+    include components/_breadcrumbs
+    +breadcrumbs('Каталог цветов', 'Каталог цветов')
+
+    section.section-colors
+
+        .container
+
+            .colors-info
+                p Цвета на экране монитора ЗНАЧИТЕЛЬНО отличаются от печатных оригиналов из-за особенностей цветопередачи. Данная таблица не может служить онлайн-каталогом и предоставлена только в ознакомительных целях. Для правильного обозначения цвета достаточно запомнить цифры каталога RAL.
+
+    section.section-board
+
+        .container
+
+            .board
+
+                .board-contact
+                    .board-contact__title Остались вопросы?
+                    .board-contact__text Свяжитесь с нами и мы всё Вам расскажем!
+                    .board-contact__action
+                        .btn.btn--white-stroke(data-src="#popup-request" data-fancybox) Задать вопрос
+                        .btn.btn--red(data-src="#popup-price-request" data-fancybox) Заказать
+
+                .board-image
+                    +img('pentrimax-bus.jpg')
+
+                .board-info
+                    p Региональные представительства в Москве, Екатеринбурге, Воронеже
+                    a(href="tel:+78003006837") +7 (800) 300-68-37
+                    a(href="mailto:info@pentrimax.ru") info@pentrimax.ru
