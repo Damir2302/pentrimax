@@ -1,3 +1,19 @@
+.section-colors {
+    padding-bottom: 60px;
+
+    @include breakpoint(md) {
+        padding-bottom: 40px;
+    }
+
+    @include breakpoint(lg) {
+        padding-bottom: 60px;
+    }
+
+    @include breakpoint(xl) {
+        padding-bottom: 0;
+    }
+}
+
 .colors-info {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -21,4 +37,129 @@
     content: "";
     padding-right: 30px;
     border-left: 3px solid $red;
+}
+
+.colors__item {
+    padding: 10px 0;
+    border-top: 1px solid #0069AE;
+
+    @include breakpoint(md) {
+        padding: 20px 0;
+    }
+}
+
+.item {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.item__color {
+    margin-right: 24px;
+    width: 20px;
+    height: 48px;
+    pointer-events: none;
+}
+
+.item__title {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 130%;
+    pointer-events: none;
+
+    @include breakpoint(md) {
+        font-size: 24px;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 32px;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 36px;
+    }
+}
+
+.item__arrow {
+    margin-left: auto;
+    background: url('../images/arrow-left.svg') no-repeat;
+    width: 44px;
+    height: 44px;
+    transform: rotate(-90deg);
+    transition: transform .3s ease;
+    pointer-events: none;
+}
+
+.item.active .item__arrow {
+    transform: rotate(-270deg);
+}
+
+.palette {
+    display: none;
+}
+
+.palette__wrap {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+
+    @include breakpoint(md) {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 20px;
+        column-gap: 20px;
+    }
+
+    @include breakpoint(lg) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include breakpoint(xl) {
+        grid-template-columns: repeat(6, 1fr);
+        row-gap: 30px;
+        column-gap: 30px;
+    }
+}
+
+.palette__item {
+    padding: 10px;
+    height: 80px;
+    border: 1px solid #38548A;
+
+    @include breakpoint(md) {
+        height: 120px;
+    }
+}
+
+.palette__item > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.palette__item-name {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+
+    @include breakpoint(md) {
+        font-size: 18px;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 20px;
+    }
+}
+
+.palette__item-color {
+    font-size: 11px;
+    text-align: center;
+
+    @include breakpoint(md) {
+        font-size: 12px;
+    }
 }

@@ -128,6 +128,17 @@ $(document).ready(function() {
         }
     });
 
+    // COLORS
+    $('.item').on('click', (e) => {
+        if (!$(e.target).hasClass('active')) {
+            $(e.target).addClass('active');
+            $(e.target).parent().find('.palette').slideDown();
+        } else {
+            $(e.target).removeClass('active');
+            $(e.target).parent().find('.palette').slideUp();
+        }
+    });
+
 });
 
 
