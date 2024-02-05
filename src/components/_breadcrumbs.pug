@@ -26,20 +26,14 @@ mixin breadcrumbs(title, ...items)
 
                 h1.title= title
                 
-                if bodyClass != 'product-page' && bodyClass != 'catalog-page' && bodyClass != 'news-page' && bodyClass != 'news-page news-page-inner' && bodyClass != 'about-page'
+                if bodyClass != 'product-page' && bodyClass != 'catalog-page' && bodyClass != 'news-page' && bodyClass != 'news-page news-page-inner' && bodyClass != 'about-page' && bodyClass != 'colors-page'
                     .btn.btn--white-stroke(onclick="history.back()") Назад
 
                 if bodyClass == 'product-page'
                     a.btn.btn--white-stroke(href="catalog.html") Назад к списку
 
-                if bodyClass == 'catalog-page'
-                    a.btn.btn--white-stroke(href="/") На главную
-
-                if bodyClass == 'news-page'
+                if bodyClass == 'catalog-page' || bodyClass == 'news-page' || bodyClass == 'about-page' || bodyClass == 'colors-page'
                     a.btn.btn--white-stroke(href="/") На главную
 
                 if bodyClass == 'news-page news-page-inner'
                     a.btn.btn--white-stroke(href="news.html") К списку новостей
-
-                if bodyClass == 'about-page'
-                    a.btn.btn--white-stroke(href="/") На главную

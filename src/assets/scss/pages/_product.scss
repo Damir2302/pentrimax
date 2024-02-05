@@ -6,12 +6,73 @@
             border-top: 1px solid #38548A;
         }
     }
+
+    .section-scope::before {
+        content: "";
+        background: radial-gradient(50% 50% at 50% 50%, #4762A5 0%, rgba(58, 65, 91, 0.00) 100%);
+        position: absolute;
+        top: -80px;
+        right: -160px;
+        width: 329px;
+        height: 273px;
+        border-radius: 329px;
+
+        @include breakpoint(md) {
+            top: -40px;
+            right: -316px;
+            width: 537px;
+            height: 445px;
+            border-radius: 537px;
+        }
+
+        @include breakpoint(lg) {
+            top: 10px;
+            right: -275px;
+        }
+
+        @include breakpoint(xl) {
+            top: -300px;
+            right: -662px;
+            width: 1362px;
+            height: 1131px;
+        }
+    }
 }
 
 .section-product {
    
     @include breakpoint(md) {
         margin-top: 70px;
+    }
+}
+
+.section-product::before {
+    content: "";
+    background: radial-gradient(50% 50% at 50% 50%, #4762A5 0%, rgba(58, 65, 91, 0.00) 100%);
+    position: absolute;
+    top: 485px;
+    right: -200px;
+    width: 404px;
+    height: 224px;
+    border-radius: 458px;
+
+    @include breakpoint(md) {
+        top: 105px;
+    }
+
+    @include breakpoint(lg) {
+        top: 185px;
+        right: -490px;
+        width: 944px;
+        height: 521px;
+    }
+
+    @include breakpoint(xl) {
+        top: 45px;
+        right: -662px;
+        width: 1362px;
+        height: 1131px;
+        border-radius: 1362px;
     }
 }
 
@@ -493,6 +554,32 @@
 
     @include breakpoint(xl) {
         padding: 80px 0;
+    }
+}
+
+.section-protocol::before {
+    content: "";
+    background: radial-gradient(50% 50% at 50% 50%, #4762A5 0%, rgba(58, 65, 91, 0.00) 100%);
+    position: absolute;
+    top: -75px;
+    left: -210px;
+    width: 392px;
+    height: 216px;
+    border-radius: 392px;
+    z-index: -1;
+
+    @include breakpoint(md) {
+        top: -110px;
+        left: -361px;
+        width: 678px;
+        height: 374px;
+    }
+
+    @include breakpoint(xl) {
+        top: -400px;
+        left: -738px;
+        width: 1434px;
+        height: 792px;
     }
 }
 

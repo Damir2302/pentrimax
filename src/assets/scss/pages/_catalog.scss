@@ -51,4 +51,70 @@
             width: calc(25% - (90px / 4));
         }
     }
+
+    .section-works::before {
+        content: "";
+        background: radial-gradient(50% 50% at 50% 50%, #4762A5 0%, rgba(58, 65, 91, 0.00) 100%);
+        position: absolute;
+        top: -360px;
+        right: -210px;
+        width: 404px;
+        height: 223px;
+        border-radius: 404px;
+        z-index: -1;
+
+        @include breakpoint(md) {
+            
+            @include breakpointMax(lg) {
+                content: none;
+            }
+        }
+
+        @include breakpoint(lg) {
+            top: -100px;
+            left: -260px;
+            right: unset;
+            width: 678px;
+            height: 374px;
+            border-radius: 678px;
+        }
+
+        @include breakpoint(xl) {
+            top: -220px;
+            left: -745px;
+            width: 1434px;
+            height: 792px;
+            border-radius: 1434px;
+        }
+    }
+
+    .section-works::after {
+
+        @include breakpoint(md) {
+            content: "";
+            background: radial-gradient(50% 50% at 50% 50%, #4762A5 0%, rgba(58, 65, 91, 0.00) 100%);
+            position: absolute;
+            top: 710px;
+            right: -210px;
+            width: 482px;
+            height: 266px;
+            border-radius: 404px;
+            z-index: -1;
+        }
+
+        @include breakpoint(lg) {
+            top: 610px;
+            right: -486px;
+            width: 944px;
+            height: 521px;
+            border-radius: 944px;
+        }
+
+        @include breakpoint(xl) {
+            top: 500px;
+            right: -640px;
+            width: 1362px;
+            height: 1131px;
+        }
+    }
 }

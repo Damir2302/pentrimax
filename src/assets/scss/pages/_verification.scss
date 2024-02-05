@@ -10,6 +10,33 @@
     }
 }
 
+.section-brand::before {
+    content: "";
+    background: radial-gradient(50% 50% at 50% 50%, #4762A5 0%, rgba(58, 65, 91, 0.00) 100%);
+    position: absolute;
+    top: 150px;
+    left: -195px;
+    width: 389px;
+    height: 214px;
+    border-radius: 389px;
+    z-index: -1;
+
+    @include breakpoint(lg) {
+        top: 0;
+        left: -640px;
+        width: 944px;
+        height: 521px;
+    }
+
+    @include breakpoint(xl) {
+        top: -35px;
+        left: -770px;
+        width: 1434px;
+        height: 792px;
+        border-radius: 1434px;
+    }
+}
+
 .brand {
     display: flex;
 
@@ -179,6 +206,41 @@
     }
 }
 
+.section-verification::before {
+    content: "";
+    background: radial-gradient(50% 50% at 50% 50%, #4762A5 0%, rgba(58, 65, 91, 0.00) 100%);
+    position: absolute;
+    top: 100px;
+    right: -90px;
+    width: 194px;
+    height: 161px;
+    border-radius: 389px;
+    z-index: -1;
+
+    @include breakpoint(md) {
+        top: -60px;
+        right: -280px;
+        width: 518px;
+        height: 431px;
+        border-radius: 518px;
+    }
+
+    @include breakpoint(lg) {
+        right: -320px;
+        top: 0;
+        width: 646px;
+        height: 537px;
+    }
+
+    @include breakpoint(xl) {
+        top: -250px;
+        right: -670px;
+        width: 1362px;
+        height: 1131px;
+        border-radius: 1362px;
+    }
+}
+
 .verification-head {
 
     @include breakpoint(md) {
@@ -230,6 +292,7 @@
 }
 
 .checking-item {
+    background: $blue-dark;
     position: relative;
     display: flex;
     align-items: center;

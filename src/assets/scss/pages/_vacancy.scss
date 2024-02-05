@@ -2,6 +2,38 @@
     padding: 40px 0;
 }
 
+.section-vacancy::before {
+    content: "";
+    background: radial-gradient(50% 50% at 50% 50%, #4762A5 0%, rgba(58, 65, 91, 0.00) 100%);
+    position: absolute;
+    top: 190px;
+    left: -195px;
+    width: 389px;
+    height: 214px;
+    border-radius: 389px;
+    z-index: -1;
+
+    @include breakpoint(md) {
+        top: 120px;
+    }
+
+    @include breakpoint(lg) {
+        top: 0;
+        left: -605px;
+        width: 944px;
+        height: 521px;
+        border-radius: 944px;
+    }
+
+    @include breakpoint(xl) {
+        top: -60px;
+        left: -650px;
+        width: 1434px;
+        height: 792px;
+        border-radius: 1434px;
+    }
+}
+
 .vacancy-wrap {
 
     @include breakpoint(md) {

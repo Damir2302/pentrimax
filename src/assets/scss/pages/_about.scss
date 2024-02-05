@@ -25,6 +25,38 @@
     }
 }
 
+.section-about::before {
+    content: "";
+    background: radial-gradient(50% 50% at 50% 50%, #4762A5 0%, rgba(58, 65, 91, 0.00) 100%);
+    position: absolute;
+    top: 190px;
+    left: -210px;
+    width: 389px;
+    height: 214px;
+    border-radius: 389px;
+    z-index: -1;
+
+    @include breakpoint(md) {
+        top: 120px;
+    }
+
+    @include breakpoint(lg) {
+        top: 0;
+        left: -600px;
+        width: 944px;
+        height: 521px;
+        border-radius: 944px;
+    }
+    
+    @include breakpoint(xl) {
+        top: -40px;
+        left: -740px;
+        width: 1434px;
+        height: 792px;
+        border-radius: 1434px;
+    }
+}
+
 .about {
     
     @include breakpoint(lg) {
@@ -184,6 +216,38 @@
 
     @include breakpoint(xl) {
         padding: 80px 0;
+    }
+}
+
+.section-history::before {
+    content: "";
+    background: radial-gradient(50% 50% at 50% 50%, #4762A5 0%, rgba(58, 65, 91, 0.00) 100%);
+    position: absolute;
+    top: 650px;
+    right: -95px;
+    width: 194px;
+    height: 161px;
+    border-radius: 389px;
+    z-index: -1;
+
+    @include breakpoint(md) {
+        top: 230px;
+        right: -255px;
+        width: 518px;
+        height: 431px;
+        border-radius: 518px;
+    }
+
+    @include breakpoint(lg) {
+        top: 490px;
+        right: -270px;
+    }
+
+    @include breakpoint(xl) {
+        top: -60px;
+        right: -670px;
+        width: 1362px;
+        height: 1131px;
     }
 }
 
