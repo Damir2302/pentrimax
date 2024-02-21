@@ -1,0 +1,72 @@
+---
+title: Страница | Страница 404
+---
+
+extends includes/_page
+
+block main
+
+    section
+
+        .container
+
+            .page404
+
+                .page404-image
+                    +img('404.svg')
+
+                .page404-title Ошибка 404. Страница не найдена.
+                .page404-text Вы находитесь здесь, потому что ввели адрес страницы, которая уже не существует или была перемещена по другому адресу
+
+                .page404-action
+                    a(href="/catalog/").btn.btn--white-stroke В каталог
+                    a(href="/").btn.btn--red На главную
+
+    style.
+        .page404 {
+            margin: 90px auto;
+            max-width: 918px;
+            text-align: center
+        }
+
+        .page404-title {
+            margin-bottom: 20px;
+            font-size: 26px;
+            font-weight: 600
+        }
+
+        .page404-text {
+            margin-bottom: 20px;
+            font-size: 16px;
+            font-weight: 500
+        }
+
+        .page404-action {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-column-gap: 20px;
+            -moz-column-gap: 20px;
+            column-gap: 20px
+        }
+
+        .page404-action .btn {
+            padding: 14px 29px;
+            display: inline-block;
+            width: auto
+        }
+
+        @media(min-width: 1024px) {
+            .page404-title {
+                margin-bottom: 30px;
+                font-size: 48px
+            }
+            
+            .page404-text {
+                margin-bottom: 30px;
+                font-size: 20px
+            }
+        }
