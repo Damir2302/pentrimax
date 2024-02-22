@@ -599,8 +599,13 @@
 .protocol {
 
     @include breakpoint(lg) {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    @include breakpoint(xl) {
+        gap: 30px;
     }
 }
 
@@ -610,14 +615,6 @@
 
     @include breakpoint(md) {
         padding: 22px;
-    }
-
-    @include breakpoint(lg) {
-        width: calc(100% / 3 - (40px / 3));
-    }
-
-    @include breakpoint(xl) {
-        width: calc(100% / 3 - 20px);
     }
 }
 
