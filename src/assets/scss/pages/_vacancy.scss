@@ -169,6 +169,7 @@
 .vacancy__expand {
     margin-top: 16px;
     padding: 14px 30px;
+    width: max-content;
 
     @include breakpoint(lg) {
         margin-top: 20px;
