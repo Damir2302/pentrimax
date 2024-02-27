@@ -1280,10 +1280,7 @@
     font-size: 14px;
     font-weight: 600;
     line-height: 130%;
-    
-    @include breakpointMax(md) {
-        @include textLimit(5);
-    }
+    @include textLimit(5);
 
     @include breakpoint(md) {
         font-size: 15px;
