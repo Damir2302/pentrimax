@@ -11,8 +11,27 @@
         }
     }
 
-    .section-stuff {
+    .section-stuff-cat {
+        padding: 16px 0;
         background: transparent;
+
+        @include breakpoint(md) {
+            padding: 28px 0;
+        }
+
+        @include breakpoint(lg) {
+            padding: 56px 0;
+        }
+
+        @include breakpoint(xl) {
+            padding: 35px 0;
+        }
+    }
+
+    .section-stuff-cat .stuff {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 20px;
     }
 
     .stuff__item:hover {
@@ -117,4 +136,5 @@
             height: 1131px;
         }
     }
+
 }
