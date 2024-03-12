@@ -260,6 +260,7 @@ textarea::placeholder {
 /////////////////////
 /// SWIPER SLIDER
 /////////////////////
+
 .swiper-pagination {
     --swiper-pagination-bullet-width: 5px;
     --swiper-pagination-bullet-height: 5px;
@@ -283,7 +284,14 @@ textarea::placeholder {
     flex-shrink: 0;
     width: 44px;
     height: 44px;
+    opacity: 0;
+    animation: fadeOut 2s ease forwards;
     cursor: pointer;
+}
+
+@keyframes fadeOut {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .swiper-navigation .slider-arrow:hover {
