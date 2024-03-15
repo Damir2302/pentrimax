@@ -162,13 +162,13 @@
 
     @include breakpoint(md) {
         flex-wrap: wrap;
-        max-height: 540px;
+        max-height: 675px;
         column-gap: 20px;
     }
 
     @include breakpoint(xl) {
         column-gap: 32px;
-        max-height: 474px;
+        max-height: 620px;
     }
 }
 
