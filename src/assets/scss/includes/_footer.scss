@@ -140,9 +140,14 @@
 }
 
 .footer__cat {
-    margin-top: 60px;
-    padding: 56px 0;
+    margin-top: 20px;
+    padding: 20px 0;
     border-top: 1px solid #38548a;
+
+    @include breakpoint(md) {
+        margin-top: 60px;
+        padding: 56px 0;
+    }
 }
 
 .footer__cat ul {
@@ -153,14 +158,25 @@
 .cat-list {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    max-height: 254px;
-    column-gap: 32px;
     row-gap: 30px;
+
+    @include breakpoint(md) {
+        flex-wrap: wrap;
+        max-height: 540px;
+        column-gap: 20px;
+    }
+
+    @include breakpoint(xl) {
+        column-gap: 32px;
+        max-height: 474px;
+    }
 }
 
 .cat-list__item {
-    width: calc(25% - 24px);
+    
+    @include breakpoint(md) {
+        width: calc(25% - 24px);
+    }
 }
 
 .cat-list__link {
@@ -168,11 +184,27 @@
     font-size: 14px;
     font-weight: 600;
     line-height: 120%;
+
+    @include breakpoint(md) {
+        font-size: 12px;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 14px;
+    }
 }
 
 .subcat-list__link {
-    font-size: 12px;
+    font-size: 11px;
     line-height: 120%;
+
+    @include breakpoint(md) {
+        font-size: 10px;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 12px;
+    }
 }
 
 .footer__bottom {
