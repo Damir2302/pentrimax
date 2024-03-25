@@ -195,10 +195,7 @@ textarea::placeholder {
 }
 
 .section-content {
-
-    @include breakpoint(xl) {
-        margin-top: 40px;
-    }
+    margin-top: 40px;
 }
 
 .section-content .content {
