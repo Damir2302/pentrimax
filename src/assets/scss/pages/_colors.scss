@@ -153,6 +153,7 @@
     transform: rotate(-90deg);
     transition: transform .3s ease;
     pointer-events: none;
+    flex-shrink: 0;
 }
 
 .item.active .item__arrow {

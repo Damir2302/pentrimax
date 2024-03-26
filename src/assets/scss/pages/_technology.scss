@@ -1,0 +1,123 @@
+.technology-page {
+
+    section {
+        margin-top: 40px;
+
+        @include breakpoint(lg) {
+            margin-top: 60px;
+        }
+
+        @include breakpoint(xl) {
+            margin-top: 80px;
+        }
+    }
+}
+
+.operation h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 130%;
+
+    @include breakpoint(md) {
+        margin-bottom: 40px;
+        font-size: 24px;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 32px;
+    }
+
+    @include breakpoint(xl) {
+        margin-bottom: 60px;
+        font-size: 36px;
+    }
+}
+
+.operation__item {
+    border-top: 1px solid #0069AE;
+}
+
+.operation__item .item {
+
+    @include breakpoint(md) {
+        padding: 20px 0;
+    }
+
+    @include breakpoint(lg) {
+        padding: 30px 0;
+    }
+}
+
+.operation__item .item__title {
+    font-size: 14px;
+
+    @include breakpoint(md) {
+        font-size: 18px;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 20px;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 22px;
+    }
+}
+
+.operation__inner {
+    margin: 30px 0;
+
+    @include breakpoint(xl) {
+        display: flex;
+        align-items: flex-start;
+    }
+}
+
+.operation__inner img {
+    
+    @include breakpoint(xl) {
+        margin-right: 30px;
+        max-width: 664px;
+    }
+}
+
+.operation__inner p {
+    
+    @include breakpointMax(xl) {
+        margin-top: 30px;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 15px;
+    }
+}
+
+.info-top {
+    padding: 25px 27px;
+    background: $blue;
+}
+
+.info-top h2 {
+    margin-bottom: 12px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 130%;
+}
+
+.info-top p {
+    font-size: 15px;
+    line-height: 150%;
+}
+
+.info .container {
+
+    @include breakpointMax(md) {
+        padding: 0;
+    }
+}
+
+.info__block {
+    margin-top: 20px;
+    background: $blue;
+}
