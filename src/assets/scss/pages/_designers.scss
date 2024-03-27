@@ -1,0 +1,23 @@
+.designers-page {
+
+    .section-designers {
+        margin-top: 40px;
+
+        @include breakpoint(lg) {
+            margin-top: 60px;
+        }
+
+        @include breakpoint(xl) {
+            margin-top: 80px;
+        }
+    }
+
+    .section-features {
+        padding-bottom: 0;
+
+        &::before,
+        &::after {
+            content: none;
+        }
+    }
+}

@@ -39,6 +39,18 @@
         border-color: $blue;
     }
 
+    .section-works {
+        margin-top: 40px;
+
+        @include breakpoint(lg) {
+            margin-top: 60px;
+        }
+
+        @include breakpoint(xl) {
+            margin-top: 80px;
+        }
+    }
+
     .works {
         display: flex;
         flex-wrap: wrap;

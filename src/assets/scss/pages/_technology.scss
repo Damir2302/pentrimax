@@ -98,6 +98,10 @@
     background: $blue;
 }
 
+.reverse-color .info-top {
+    background: #38548A;
+}
+
 .info-top h2 {
     margin-bottom: 12px;
     font-size: 22px;
@@ -119,5 +123,193 @@
 
 .info__block {
     margin-top: 20px;
+    padding: 32px 30px; 
     background: $blue;
+
+    @include breakpoint(md) {
+        margin-top: 40px;
+    }
+
+    @include breakpoint(xl) {
+        margin-top: 60px;
+    }
+}
+
+.reverse-color .info__block {
+    background: #38548A;
+}
+
+.info__title {
+    margin-bottom: 24px;
+    padding: 12px;
+    background: #38548A;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.reverse-color .info__title {
+    background: $blue;
+}
+
+.order-title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 130%;
+
+    @include breakpoint(md) {
+        margin-bottom: 40px;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 32px;
+    }
+
+    @include breakpoint(xl) {
+        margin-bottom: 60px;
+    }
+}
+
+.order {
+    counter-reset: number;
+
+    @include breakpoint(md) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    @include breakpoint(lg) {
+        gap: 30px;
+    }
+}
+
+.order__item {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 20px;
+
+    @include breakpoint(md) {
+        width: calc(50% - 10px);
+    }
+
+    @include breakpoint(lg) {
+        width: calc(25% - (90px / 4));
+        
+        @include breakpointMax(xl) {
+            flex-direction: column;
+        }
+    }
+
+    @include breakpoint(xl) {
+        column-gap: 30px;
+    }
+}
+
+.order__item ~ .order__item {
+    
+    @include breakpointMax(md) {
+        margin-top: 20px;
+    }
+}
+
+.order__item::before {
+    content: counter(number);
+    counter-increment: number;
+    width: 28px;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1;
+    color: $red;
+
+    @include breakpoint(lg) {
+        
+        @include breakpointMax(xl) {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.order__item-title {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+
+    @include breakpoint(md) {
+        font-size: 18px;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 20px;
+    }
+}
+
+.order__item-info {
+
+    @include breakpoint(md) {
+        font-size: 15px;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 16px;
+    }
+}
+
+.docs-title {
+    margin-bottom: 30px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 130%;
+
+    @include breakpoint(md) {
+        margin-bottom: 40px;
+        font-size: 24px;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 32px;
+    }
+
+    @include breakpoint(xl) {
+        margin-bottom: 60px;
+    }
+}
+
+.docs {
+    display: grid;
+    gap: 20px;
+
+    @include breakpoint(md) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include breakpoint(xl) {
+        gap: 30px;
+    }
+}
+
+.docs a {
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 150%;
+    border: 1px solid #38548A;
+
+    @include breakpoint(md) {
+        padding: 20px 25px;
+        font-size: 14px;
+    }
+}
+
+.docs a::before {
+    content: "";
+    margin-right: 20px;
+    background: url('../images/pdf-icon.svg') no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 12px;
+    height: 24px;
 }
