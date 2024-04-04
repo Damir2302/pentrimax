@@ -842,6 +842,12 @@
 
     @include breakpoint(md) {
         position: relative;
+
+        @include breakpointMax(hd) {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
     }
 }
 
@@ -870,9 +876,8 @@
     @include breakpoint(md) {
         
         @include breakpointMax(hd) {
-            position: absolute;
-            top: -9px;
-            right: 0;
+            margin-bottom: 40px;
+            margin-left: auto;
         }
     }
 }
@@ -907,14 +912,21 @@
     }
 }
 
-.works__item {
-    height: auto;
+.works-block .swiper {
+
+    @include breakpoint(md) {
+        
+        @include breakpointMax(hd) {
+            width: 100%;
+        }
+    }
 }
 
-.works__item a {
+.works__item {
     padding: 10px;
-    display: block;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
     border: 1px solid #38548A;
     transition: background .3s ease-out;
 
@@ -923,7 +935,7 @@
     }
 }
 
-.works__item a:hover {
+.works__item:hover {
     background: $blue;
 }
 
@@ -962,7 +974,38 @@
 }
 
 .works__item-text {
+    margin-bottom: 10px;
     font-size: 14px;
+
+    @include breakpoint(xl) {
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+}
+
+.works__item-action {
+    margin-top: auto;
+
+    @include breakpoint(xl) {
+        display: flex;
+        column-gap: 20px;
+    }
+}
+
+.works__item .btn {
+    width: 100%;
+    height: 40px;
+}
+
+.works__item .btn:hover {
+    background: $blue-dark;
+}
+
+.works__item-action .btn:first-child {
+    
+    @include breakpointMax(xl) {
+        margin-bottom: 12px;
+    }
 }
 
 .section-filial {
