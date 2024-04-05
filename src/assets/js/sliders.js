@@ -5,6 +5,9 @@ $(document).ready(function() {
         spaceBetween: 10,
         observer: true,
         observeParents: true,
+        autoplay: {
+            delay: 5000
+        },
 
         pagination: {
             el: '.hero .swiper-pagination',
@@ -26,7 +29,7 @@ $(document).ready(function() {
             spaceBetween: 10,
             observer: true,
             observeParents: true,
-    
+
             navigation: {
                 prevEl: `.works-block-${index} .slider-arrow--prev`,
                 nextEl: `.works-block-${index} .slider-arrow--next`,

@@ -44,7 +44,7 @@ $(document).ready(function() {
         $('#menu').toggleClass('active');
         $('#page').toggleClass('bg-overlay');
     })
-    
+
     $('#menu .arrow-down').on('click', (e) => {
         $(e.target).parent().toggleClass('active');
         $(e.target).next().slideToggle();
@@ -59,12 +59,12 @@ $(document).ready(function() {
             $(window).scroll(function(e) {
                 var windowTopPos = Math.floor($(this).scrollTop()),
                 menuTopPos = Math.floor($('.section-company').offset().top);
-                
+
                 if(windowTopPos >= menuTopPos - 500) {
                     if(one) {
                         $('.spincrement').spincrement({
                             from: 0,
-                            duration: 5000,
+                            duration: 1000,
                             thousandSeparator: " ",
                         });
 
@@ -79,7 +79,7 @@ $(document).ready(function() {
 
     // FILIAL MAP
     $('.points__item').on('click', (e) => {
-        
+
         if ($(e.target).hasClass('active')) {
             $($(e.target)).removeClass('active');
         } else {
