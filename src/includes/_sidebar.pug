@@ -16,19 +16,23 @@ block side
         .sidebar-buttons
 
             .sidebar-buttons-search
-                a(href="javascript:void(0)" data-src="#popup-search" data-fancybox) 
+                a(href="javascript:void(0)" title="Поиск" data-src="#popup-search" data-fancybox) 
                     +img('search.svg')
             
             .sidebar-buttons-phone
-                a(href="tel:8(800)3006837")
+                a(href="tel:8(800)3006837" title="Телефон")
                     +img('phone.svg')
             
+            .sidebar-buttons-telegram
+                a(href="https://t.me/pentrimaxru" title="Телеграм" target="_blank") 
+                    +img('tg-icon.svg')
+            
             .sidebar-buttons-request
-                a(href="javascript:void(0)" data-src="#popup-request" data-fancybox) 
+                a(href="javascript:void(0)" title="Оставить заявку" data-src="#popup-request" data-fancybox) 
                     +img('message-quote.svg')
             
             .sidebar-buttons-email
-                a(href="mailto:example@mail.ru") 
+                a(href="mailto:example@mail.ru" title="Почта") 
                     +img('envelope.svg')
 
         #menu.menu
@@ -67,19 +71,23 @@ block side
             .menu__buttons
 
                 .menu__buttons-search
-                    a(href="javascript:void(0)" data-src="#popup-search" data-fancybox) 
+                    a(href="javascript:void(0)" title="Поиск" data-src="#popup-search" data-fancybox) 
                         +img('search.svg')
                 
                 .menu__buttons-phone
-                    a(href="tel:8(800)3006837")
+                    a(href="tel:8(800)3006837" title="Телефон")
                         +img('phone.svg')
-                
+
+                .menu__buttons-telegram
+                    a(href="https://t.me/pentrimaxru" target="_blank" title="Телеграм") 
+                        +img('tg-icon.svg')
+                    
                 .menu__buttons-request
-                    a(href="javascript:void(0)" data-src="#popup-request" data-fancybox) 
+                    a(href="javascript:void(0)" title="Оставить заявку" data-src="#popup-request" data-fancybox) 
                         +img('message-quote.svg')
                 
                 .menu__buttons-email
-                    a(href="mailto:example@mail.ru") 
+                    a(href="mailto:example@mail.ru" title="Почта") 
                         +img('envelope.svg')
 
             .menu__country

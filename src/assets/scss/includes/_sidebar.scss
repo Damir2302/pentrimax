@@ -73,6 +73,10 @@
     padding: 12px 15px;
 }
 
+.sidebar-buttons a {
+    width: 18px;
+}
+
 .menu {
     padding: 30px 50px;
     background: $blue-dark;
@@ -193,6 +197,10 @@
 
 .menu__buttons > div {
     padding: 12px 15px;
+}
+
+.menu__buttons a {
+    width: 18px;
 }
 
 .menu__country {
