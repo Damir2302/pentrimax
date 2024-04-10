@@ -192,10 +192,17 @@
     padding: 10px;
     height: 80px;
     border: 1px solid #38548A;
+    transition: transform .3s ease;
+    user-select: none;
+    cursor: default;
 
     @include breakpoint(md) {
         height: 120px;
     }
+}
+
+.palette__item:hover {
+    transform: scale(1.1);
 }
 
 .palette__item > div {
