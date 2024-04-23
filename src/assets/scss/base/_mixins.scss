@@ -54,6 +54,12 @@ $hd: 1920px;
             @content ;
         }
     }
+
+    @else if $point {
+        @media (min-width: $point) {
+            @content ;
+        }
+    }
 }
 
 @mixin breakpointMax($point) {
@@ -104,17 +110,11 @@ $hd: 1920px;
             @content ;
         }
     }
-}
 
-@mixin breakpointCustom($point) {
-    @media (min-width: $point) {
-        @content ;
-    }
-}
-
-@mixin breakpointMaxCustom($point) {
-    @media (max-width: $point - 1px) {
-        @content ;
+    @else if $point {
+        @media (max-width: $point - 1px) {
+            @content ;
+        }
     }
 }
 
