@@ -172,7 +172,7 @@ $(document).ready(function() {
                     iconImageHref: 'assets/images/point_red.svg',
                     // Размеры метки.
                     iconImageSize: [15, 15],
-                    iconImageOffset: [-8, 8],
+                    iconImageOffset: [-8, -5],
                     hideIconOnBalloonOpen: false
                 });
 
