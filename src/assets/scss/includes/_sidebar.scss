@@ -63,7 +63,7 @@
     @include breakpointMax(lg) {
         display: none;
     }
-    
+
     @include breakpoint(lg) {
         margin-top: auto;
     }
@@ -173,6 +173,10 @@
 
 .menu__phone {
     margin-top: auto;
+}
+
+.menu__phone ~ .menu__phone {
+    margin-top: 24px;
 }
 
 .menu__phone a {

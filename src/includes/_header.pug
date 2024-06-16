@@ -4,26 +4,26 @@ block header
     header#header.header
 
         .container
-            
+
             .header__inner
 
                 .header__logo
-                    a(href="/") 
+                    a(href="/")
                         +img('logo.svg')
 
                 .header__nav
-                    
+
                     nav.nav
 
                         ul.nav-list
                             li.nav__item.has-child
                                 a.nav__item-link(href="about.html") О компании
                                 .arrow-down
-                                
+
                                 ul.subnav
                                     li.subnav__item
                                         a.subnav__item-link(href="news.html") Новости
-                                    
+
                                     li.subnav__item
                                         a.subnav__item-link(href="vacancy.html") Вакансии
 
@@ -41,7 +41,10 @@ block header
                                 a.nav__item-link(href="contacts.html") Контакты
 
                 .header__phone
+                    a(href="tel:+74951203113") +7 (495) 120-31-13
+                    span |
                     a(href="tel:8(800)3006837") 8 (800) 300-68-37
+                    p (Звонок бесплатный по всей России)
 
                 .header-menu
                     .burger
