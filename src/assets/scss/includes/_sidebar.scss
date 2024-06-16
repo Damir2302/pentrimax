@@ -175,13 +175,13 @@
     margin-top: auto;
 }
 
-.menu__phone ~ .menu__phone {
-    margin-top: 24px;
-}
-
 .menu__phone a {
     font-size: 16px;
     font-weight: 600;
+}
+
+.menu__phone a ~ a {
+    margin-top: 24px;
 }
 
 .menu__phone a:hover {
