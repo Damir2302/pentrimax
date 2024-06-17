@@ -66,18 +66,23 @@
 }
 
 .operation__inner {
-    margin: 30px 0;
+    margin: 10px 0;
+
+    @include breakpoint(lg) {
+        margin: 30px 0;
+    }
 
     @include breakpoint(xl) {
         display: flex;
         align-items: flex-start;
+        flex-wrap: wrap;
     }
 }
 
 .operation__inner img {
     
     @include breakpoint(xl) {
-        margin-right: 30px;
+        margin-bottom: 30px;
         max-width: 664px;
     }
 }
